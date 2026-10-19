@@ -24,7 +24,7 @@ Bu bölüm, ikas panelinden tema editörüne (Studio) ulaşmak için gereken ad�
 
 ## Studio editörünü açma
 
-1. Yayındaki temanın yanında bulunan **Temayı Özelleştir** butonuna tıklayın. ikas Studio editörü açılarak mağaza sayfanız düzenleme moduna geçer.
+1. Yayındaki temanın yanında bulunan **Özelleştir** butonuna tıklayın. ikas Studio editörü açılarak mağaza sayfanız düzenleme moduna geçer.
 
 ![ikas Studio Temayı Özelleştir butonu](/assets/img/ikas-panel-temalarim-yakin-01.png)
 
