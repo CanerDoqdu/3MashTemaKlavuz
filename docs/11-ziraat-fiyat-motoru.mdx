@@ -1,0 +1,144 @@
+---
+id: ziraat-fiyat-motoru
+title: Ziraat Fiyat Motoru (EUR/TRY)
+sidebar_label: Ziraat Fiyat Motoru
+sidebar_position: 11
+---
+
+# Ziraat Fiyat Motoru (EUR/TRY)
+
+ikas e-ticaret altyapısı için geliştirilmiş, Ziraat Bankası EUR/TRY döviz kurunu takip ederek ürün varyant fiyatlarını otomatik hesaplayan ve fail-closed (güvenlik kilitli) doğrulama ile güncelleyen fiyatlandırma motoru.
+
+Sistem, Ziraat Bankası üzerinden anlık kuru alır; Ziraat erişilemezse TCMB kuruna geçer, ürünlerin TRY fiyatlarını hesaplar, tüm güvenlik ve sınır kontrollerini doğrular ve yalnızca tüm güvenlik kapıları başarıyla geçtiğinde ikas fiyat listesini günceller.
+
+---
+
+## Temel Özellikler
+
+- **EUR ➔ TRY Otomatik Fiyat Dönüşümü:** Euro bazlı maliyetleri anlık kura göre TL fiyatlara çevirir.
+- **Otomatik Kur Takibi:** Belirlenen aralıklarla güncel döviz kurunu çeker.
+- **ikas GraphQL Entegrasyonu:** Fiyat listesini ikas GraphQL API üzerinden doğrudan senkronize eder.
+- **Sınır ve Güvenlik Doğrulamaları:** Beklenmedik ani kur sıçramaları veya hatalı fiyat hesaplamalarında güncellemeyi otomatik olarak durdurur.
+- **Dry-run (Kuru Çalıştırma) Modu:** Mağaza fiyatlarına dokunmadan hesaplamaları test etme imkânı.
+- **Redis & PostgreSQL Altyapısı:** Anlık kur verisi için Redis önbelleği, geçmiş işlemler ve denetim logları için PostgreSQL.
+- **Zamanlanmış Worker Görevleri:** Arka planda kesintisiz çalışan fiyat ve kur işleyicileri.
+
+---
+
+## Güvenlik Politikası ve Kur Öncelik Hiyerarşisi
+
+Sistem **"fail-closed"** (şüphe durumunda kilitle) prensibiyle çalışır. Kur veya hesaplanan fiyatlar doğrulama testlerini geçemezse mağaza fiyat listesi kesinlikle değiştirilmez.
+
+### Kur Öncelik Sıralaması
+
+```text
+1. Ziraat Bankası kuru geçerliyse ──► Ziraat kuru ile fiyat listesini güncelle
+2. Ziraat erişilemezse           ──► TCMB kuru ile fiyat listesini güncelle
+3. Ziraat ve TCMB erişilemezse   ──► Varsa ikincil FX API kuru ile güncelle
+4. Tümü başarısız ise            ──► Güncellemeyi tamamen ENGELLE (BLOKE ET)
+```
+
+:::important Fiyat Listesi Politikası
+Sistem her koşulda `.env` dosyasında yapılandırılan **`IKAS_PRICE_LIST_ID`** listesini günceller. Ziraat yerine TCMB kuruna geçilmesi yalnızca hesaplamada kullanılan döviz kurunu değiştirir; mağazadaki aktif fiyat listesi değiştirilmez.
+:::
+
+---
+
+## Kurulum ve Çalıştırma
+
+### Gereksinimler
+
+- Docker & Docker Compose
+- ikas mağaza API erişim bilgileri (Store Name, Client ID, Client Secret, Price List ID)
+- PostgreSQL & Redis (Docker Compose içerisinde hazır ayağa kalkar)
+- *(İsteğe bağlı)* Son çare harici döviz API anahtarı
+
+### Adım 1: Depoyu Klonlayın ve Ortam Dosyasını Oluşturun
+
+```bash
+cp .env.example .env
+```
+
+`.env` dosyasını mağaza bilgilerinize göre doldurun:
+
+```env
+# ikas API Bilgileri
+IKAS_STORE_NAME=magaza-adiniz
+IKAS_CLIENT_ID=ornek_client_id
+IKAS_CLIENT_SECRET=ornek_client_secret
+IKAS_PRICE_LIST_ID=ornek_price_list_id
+
+# Veritabanı ve Önbellek
+DATABASE_URL=postgresql://user:password@postgres:5432/pricing_db
+REDIS_URL=redis://redis:6379/0
+
+# Güvenlik ve Harici API
+SECONDARY_FX_API_KEY=
+ADMIN_API_TOKEN=super_secret_admin_token
+
+# İlk Kurulum Güvenlik Bayrakları (Başlangıçta kapalı tutun)
+DRY_RUN=true
+PRICING_UPDATES_ENABLED=false
+AUTO_UPDATE_ENABLED=false
+```
+
+:::warning İlk Çalıştırmada Güncellemeleri Kapalı Tutun
+İlk testleri yaparken `DRY_RUN=true` ve `PRICING_UPDATES_ENABLED=false` olarak bırakın. Fiyat önizlemelerini (`/api/price-preview`) kontrol edip doğruluğundan emin olduktan sonra canlı güncellemeleri aktif edin.
+:::
+
+### Adım 2: Servisleri Başlatın
+
+```bash
+docker compose up --build -d
+```
+
+Servis ayağa kalktığında API şu adreste yayında olacaktır:
+`http://localhost:8000`
+
+---
+
+## API Uç Noktaları ve Kullanımı
+
+### 1. Servis Durumu ve Sağlık Kontrolü
+
+```bash
+curl http://localhost:8000/health
+curl http://localhost:8000/api/status
+```
+
+### 2. Güncel EUR/TRY Kurunu Sorgulama
+
+```bash
+curl http://localhost:8000/api/rate/eur-try
+```
+
+### 3. Hesaplanmış Fiyatları Önizleme (Mağazaya Yazmadan)
+
+```bash
+curl http://localhost:8000/api/price-preview
+```
+
+### 4. Fiyat Güncellemesini Manuel Tetikleme
+
+```bash
+curl -X POST http://localhost:8000/api/pricing/run \
+  -H "Authorization: Bearer $ADMIN_API_TOKEN"
+```
+
+---
+
+## Test ve Canlı Ortam (Production)
+
+### Testleri Çalıştırma
+
+```bash
+docker compose run --rm api pytest
+```
+
+### Canlıya Alma (Render Dağıtımı)
+
+Proje içerisinde API, arka plan worker'ları, PostgreSQL ve Redis servislerini tek tıkla ayağa kaldırmak için hazırlanmış **`render.yaml`** şablonu mevcuttur.
+
+:::caution Kimlik Bilgileri Güvenliği
+`.env` dosyasını veya ikas API anahtarlarını asla Git deposuna commit etmeyin. Eğer anahtarlar önceden açık bir ortama sızdıysa, sistemi devreye almadan önce ikas panelinden yeni anahtarlar oluşturup eskilerini iptal edin.
+:::

@@ -1,0 +1,64 @@
+---
+id: llm-dosyalari
+title: LLM (Yapay Zekâ) Dosyaları
+sidebar_label: LLM Dosyaları
+sidebar_position: 9
+---
+
+# LLM (Yapay Zekâ) Dosyaları
+
+Yapay zekâ ajanları (ChatGPT, Claude, Perplexity vb.) ve web tarayıcıları için sitenin kök dizinine rehber dosyalar ekleme adımları.
+
+`llms.txt`, yapay zekâ botlarına sitenin ne sunduğunu ve en önemli sayfalarını özetleyen hafif bir metin dosyasıdır. Ajanlar sayfaları tek tek tarayıp bilgi ayıklamak yerine doğrudan bu dosyayı okuyarak mağazanızı çok daha hızlı ve doğru anlar.
+
+Bu yapıda iki ana dosya kullanılır:
+
+- **`llms.txt`:** Genel mağaza tanıtımı, kategoriler ve ana yönlendirmeleri içerir.
+- **`resins.md`:** Reçineler, ürün özellikleri ve teknik detaylar hakkında kapsamlı bilgi sunar.
+
+:::info Resmi Standart Durumu
+`llms.txt`, web standartları topluluğu tarafından önerilen yeni nesil bir yöntemdir. Her botun okuyacağı garanti edilmemekle birlikte, destekleyen modern yapay zekâ sistemlerinin mağazanızı doğru indekslemesini sağlar.
+:::
+
+---
+
+## Dosyaları ikas Paneline Ekleme
+
+ikas panelindeki **Kurulu Uygulamalar** bölümünde yer alan **Dosyalar** alanı, temanın kök dizinine eklenmesi gereken özel dosyalar için ayrılmıştır.
+
+### Yükleme Adımları
+
+1. ikas yönetim panelinde **Kurulu Uygulamalar** ➔ **Dosyalar** alanına gidin.
+2. Sağ üstteki **Dosya Ekle** butonuna tıklayın.
+3. Hazırladığınız `llms.txt` ve `resins.md` dosyalarını yükleyin.
+
+Dosyalar sitenizin kök dizininde yayınlanacağı için erişim adresleri şu şekilde olur:
+
+- `https://siteadresiniz.com/llms.txt`
+- `https://siteadresiniz.com/resins.md`
+
+:::tip Canlı Bağlantıyı Kontrol Edin
+Dosyaları yükledikten sonra yukarıdaki bağlantıları tarayıcınızda açarak metinlerin eksiksiz ve utf-8 uyumlu görüntülendiğini doğrulayın.
+:::
+
+---
+
+## Sitede Yönlendirme (AI Agents Alanı)
+
+Yapay zekâ tarayıcılarının bu dosyaları kolayca keşfedebilmesi için sitenin alt kısmına (footer bileşeninin hemen üzerine) yönlendirme satırları yerleştirilir.
+
+Bu alanlar Studio üzerinde **Kod Bileşenler** altında bölüm olarak yönetilir:
+
+| Bölüm | Görevi / Yönlendirme |
+| --- | --- |
+| **Yapay Zekâ Tanıtım Alanı** | Genel mağaza tanıtımı ve `llms.txt` bağlantısı |
+| **Reçineler İçin Alan** | 3D baskı reçineleri ve `resins.md` bağlantısı |
+| **Yazıcılar İçin Alan** | 3D yazıcı modelleri ve ilgili teknik sayfa bağlantıları |
+
+---
+
+## Güncel Tutma
+
+:::warning Bilgiler Güncel Olmalıdır
+Ürün özellikleri, reçine parametreleri veya sertifika bilgileri değiştiğinde kök dizindeki dosyalarda yer alan veriler de güncellenmelidir. Güncel olmayan dosyalar yapay zekâ botlarının müşterilere yanlış bilgi vermesine yol açabilir.
+:::

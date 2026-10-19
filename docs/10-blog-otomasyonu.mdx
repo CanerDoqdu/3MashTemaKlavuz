@@ -1,0 +1,78 @@
+---
+id: blog-otomasyonu
+title: Blog Otomasyonu
+sidebar_label: Blog Otomasyonu
+sidebar_position: 10
+---
+
+# Blog Otomasyonu
+
+Her gün manuel uğraş gerektirmeden, SEO uyumlu ve görselli blog yazılarını ikas mağazasına otomatik olarak **Taslak** statüsünde yükleyen sistemin yapısı ve çalışma mantığı.
+
+Otomasyon belirlenen saatte kendiliğinden tetiklenir; günün konusunu seçer, yapay zekâ ile metni hazırlar, telifsiz stok görsel bulup mağazanıza taslak olarak ekler. Mağaza yöneticisi yalnızca taslağı gözden geçirip yayına alır.
+
+:::info Neden Bu Yöntem Kullanıldı?
+ikas altyapısında blog içeriklerini dışarıdan eklemeye yönelik resmi bir public API bulunmamaktadır. Blog yönetimi yetkili oturumla yönetim paneli üzerinden yürütülür. Bu nedenle otomasyon, güvenli oturum bilgisiyle panelin kendi iç uç noktasını kullanır.
+:::
+
+---
+
+## Nasıl Çalışır?
+
+1. **Zamanlanmış Görev:** Sistem her gün belirlenen saatte otomatik olarak çalışır.
+2. **Konu Kontrolü:** Daha önce işlenen başlıklar hafızadan sorgulanır; aynı konu tekrar seçilmez.
+3. **Yapay Zekâ İçerik Üretimi:** Seçilen konuya özel Türkçe blog metni, alt başlıklar ve görsel arama sorguları üretilir.
+4. **Görsel Seçimi:** Pexels üzerinden arama sorgusuna uygun fotoğraflar taranır ve puanlanarak en iyisi seçilir.
+5. **Taslak Olarak Yükleme:** Metin, biçimlendirme ve seçilen görsel ikas paneline **Taslak** olarak aktarılır.
+
+---
+
+## Mimari ve Kullanılan Servisler
+
+| Katman | Kullanılan Servis | Görevi |
+| --- | --- | --- |
+| **Çalışma Ortamı** | Zoho Catalyst | Görevi her gün otomatik tetikler; bilgisayarın açık kalmasına gerek yoktur. |
+| **Hafıza / Veritabanı** | Catalyst DataStore | Oturum bilgisini, geçmiş konuları ve kullanılan görsel kimliklerini saklar. |
+| **Metin Üretimi** | Groq (`gpt-oss-120b`) | SEO uyumlu Türkçe içerik ve görsel arama sorguları üretir. |
+| **Görsel Kaynağı** | Pexels | Aranan konuya uygun yüksek çözünürlüklü stok fotoğrafları sağlar. |
+| **Mağaza Bağlantısı** | ikas Admin | Hazırlanan metni ve görselleri taslak olarak mağaza paneline kaydeder. |
+
+---
+
+## Görsel Seçimi ve Doğrulama
+
+Görselin konuyla tam uyumlu olması için üç aşamalı bir filtreleme uygulanır:
+
+1. **Somut Arama:** Yapay zekâdan soyut kavramlar yerine doğrudan somut nesneler içeren İngilizce arama sorgusu talep edilir (örneğin: `dental 3d printer calibration test cube`).
+2. **Puanlama:** Dönen görseller konuyla alaka düzeyine göre sıralanır.
+3. **Tekrarsız Seçim:** En yüksek puanlı görsel seçilir; kullanılan görselin ID'si veritabanına kaydedilerek sonraki günlerde tekrar seçilmesi engellenir.
+
+---
+
+## İstek Sınırları ve Kota Yönetimi
+
+Ücretsiz servis kotalarına ve hız sınırlarına takılmamak adına:
+
+- Yapay zekâya gönderilen yönlendirmeler kısa ve sade tutulur.
+- İşlem adımları arasına kontrollü bekleme süreleri (yaklaşık 70 saniye) yerleştirilmiştir.
+
+---
+
+## Denenip Elenen Alternatifler
+
+| Yöntem | Neden Seçilmedi? |
+| --- | --- |
+| **Tarayıcı botu (Puppeteer/Selenium)** | Bilgisayarın ve tarayıcının sürekli açık kalmasını gerektirir; ikas panelindeki güvenlik/doğrulama adımlarına takılabilir. |
+| **Görselleri LLM ile piksel piksel analiz etme** | API maliyeti ve hız kısıtları nedeniyle gereksiz bulundu. |
+| **Katı kelime kurallarıyla arama** | Tam eşleşme bulunamadığında tüm akışın durmasına yol açıyordu; puanlama tabanlı sisteme geçildi. |
+
+---
+
+## Önemli Güvenlik ve İşletim Notları
+
+:::warning Taslakları İncelemeden Yayınlamayın
+Otomasyon tarafından üretilen içerikler kasıtlı olarak **Taslak** olarak yüklenir. Yayına almadan önce başlık, imla ve görsel uyumunu bir kez gözden geçirmeniz önerilir.
+:::
+
+- ikas admin oturum bilgisi süresi dolduğunda DataStore üzerinden yenilenmelidir.
+- ikas panelinde yapısal bir arayüz güncellemesi yapıldığında iç bağlantı formatının kontrol edilmesi gerekebilir.
