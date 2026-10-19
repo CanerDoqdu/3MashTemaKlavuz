@@ -1,4 +1,4 @@
-﻿---
+---
 sidebar_position: 2
 title: Dil, çeviri ve URL rotaları
 ---
@@ -8,11 +8,6 @@ title: Dil, çeviri ve URL rotaları
 ## Bu bölümde
 
 Bu bölüm, Türkçe ve İngilizce içerik alanlarını, sayfa rotalarını ve slug değerlerini açıklar.
-
-## Ön koşullar
-
-- [Studio'da sayfa ve bölümleri düzenleme](../studio/01-ikas-studio.md) bölümünün okunmuş olması.
-- Canlı mağaza adresi verilmediyse rota veya çeviriyi yayında doğrulanmış kabul etmeyin.
 
 ## Dil seçimi ve çevrilen metinler
 
@@ -42,13 +37,9 @@ Bu örnekler bütün sayfa ve ürünlerin İngilizce karşılığı olduğu anla
 
 ## Güvenli kontrol sırası
 
-1. Studio'da düzenlenen alanın adını ve hangi bağlantıyı kontrol ettiğini okuyun.
-   - Beklenen sonuç: Metin alanı veya `/cart` gibi bir iç rota.
-2. İngilizce karşılığı gereken bağlantıyı kodda tanımlı eşlemeyle karşılaştırın.
-   - Beklenen sonuç: Yalnızca açıkça eşlenmiş yollar için İngilizce örnek.
-3. Kullanıcı tarafından sağlanan önizleme bağlantısı varsa iki dili de orada kontrol edin.
-   - Beklenen sonuç: Ulaşılabilen sayfanın gerçek başlığı ve açılan yolu.
-   - **DOĞRULANACAK:** Bu kılavuz çalışmasında canlı mağaza önizleme bağlantısı sağlanmadığı için İngilizce sayfaların açılması ve tüm slug'lar test edilmedi.
+1. Studio'da düzenlenen alanın adını ve hangi bağlantıyı kontrol ettiğini belirleyin (örneğin metin alanı veya `/cart` gibi bir iç rota).
+2. İngilizce karşılığı gereken bağlantıyı kodda tanımlı eşlemelerle karşılaştırın.
+3. Önizleme ekranında her iki dil seçeneğinde de yönlendirmelerin ve metinlerin doğru çalıştığını kontrol edin.
 
 ## Sonraki adım
 

@@ -17,12 +17,9 @@ Bu sayı temanın dosyalarında kayıtlı bölümlerin toplamıdır. Her bölüm
 
 ## İlerleme adımları
 
-1. Studio'ya erişim adımlarını tamamlayın.
-   - Beklenen sonuç: Studio editöründe mağaza sayfası ve düzenleme bölümleri görünür.
-2. Sol menüden [Studio'da Düzenleme](../studio/01-ikas-studio.md) bölümünü açın.
-   - Beklenen sonuç: Sayfa ve bölüm alanlarının konumunu anlatan yönergeler.
-3. [Bölüm Rehberi](../bolumler/index.md) içinden ihtiyaca uyan bölümü seçin.
-   - Beklenen sonuç: İlgili bölümün amacı ve yapılandırmada tanımlı alanları.
+1. [Studio'ya erişim](./01-kurulum-ve-ilk-acilis.md) adımlarını tamamlayarak editörü açın.
+2. [Studio'da Düzenleme](../studio/01-ikas-studio.md) bölümünden sayfa ve bölüm alanlarının konumunu inceleyin.
+3. [Bölüm Rehberi](../bolumler/index.md) içinden ihtiyacınıza uyan bölümü seçerek ayarlarını görüntüleyin.
 
 ## Sonraki adım
 
