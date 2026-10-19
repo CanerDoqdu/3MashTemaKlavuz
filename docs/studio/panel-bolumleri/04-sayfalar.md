@@ -10,8 +10,8 @@ Sayfalar, sitenin farklı bölümlerini temsil eder. Anasayfa, ürün sayfası, 
 
 **Tema ile hazır gelen sayfalar:** Anasayfa, Bulunamadı 404 ve Ödeme Sayfası.
 
-<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/pages-01.mp4" style={{width: "100%", borderRadius: "8px"}} />
-<p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>Sayfa ekleme ve yönetim akışı örneği</p>
+<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/pages-01.mp4" style="width:100%;border-radius:8px"></video>
+<p style="text-align:center;font-size:0.9rem">Sayfa ekleme ve yönetim akışı örneği</p>
 
 ---
 
@@ -32,8 +32,8 @@ Temana ekleyebileceğin sayfa tipleri:
 
 Ödeme Sayfası, ikas tarafından hazırlanan özel bir bölümden oluşur. Yalnızca o bölümün izin verdiği ayarlar değiştirilebilir; başka bölüm veya bileşen eklenemez.
 
-<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/pages-02.mp4" style={{width: "100%", borderRadius: "8px"}} />
-<p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>Ödeme sayfası örneği</p>
+<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/pages-02.mp4" style="width:100%;border-radius:8px"></video>
+<p style="text-align:center;font-size:0.9rem">Ödeme sayfası örneği</p>
 
 ---
 
@@ -54,7 +54,6 @@ Her sayfanın kendi ayar penceresi vardır. Buradan sayfanın Google'da nasıl g
 Değişiklik yaptıktan sonra **Kaydet**'e basmayı unutma.
 :::
 
-
 ---
 
 ## Kısıtlamalar
@@ -72,6 +71,5 @@ Aynı sayfa tipi için farklı tasarımlar yapabilirsin. Her özelleştirmenin k
 
 Özelleştirmeler, sol taraftaki sayfa listesinde ilgili sayfanın altında görünür. Örneğin "Ürün Sayfası" altında "Varsayılan Şablon" ve her özelleştirme ayrı satır olarak listelenir.
 
-<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/pages-03.mp4" style={{width: "100%", borderRadius: "8px"}} />
-<p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>Özelleştirmeler örneği</p>
-
+<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/pages-03.mp4" style="width:100%;border-radius:8px"></video>
+<p style="text-align:center;font-size:0.9rem">Özelleştirmeler örneği</p>

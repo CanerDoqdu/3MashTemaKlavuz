@@ -45,8 +45,8 @@ Sayfalar bölümlerden oluşur. Bir elementi bölümün dışına koyabilirsin, 
 Bir elemente sağ tıklayıp **Stili Temizle** seçeneğini kullanarak tüm stilleri sıfırlayabilirsin.
 :::
 
-<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/elements-01.mp4" style={{width: "100%", borderRadius: "8px"}} />
-<p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>Elementler kısmının genel görünümü</p>
+<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/elements-01.mp4" style="width:100%;border-radius:8px"></video>
+<p style="text-align:center;font-size:0.9rem">Elementler kısmının genel görünümü</p>
 
 ---
 
@@ -57,5 +57,5 @@ Bir elemente sağ tıklayıp **Stili Temizle** seçeneğini kullanarak tüm stil
 
 Her ikisi de tema geliştiricisi tarafından bir kez tasarlanır; oluşturulduktan sonra tekrar tekrar kullanılabilir.
 
-<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/elements-02.mp4" style={{width: "100%", borderRadius: "8px"}} />
-<p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>ikas tarafından hazırlanan bazı bölüm ve bileşen örnekleri</p>
+<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/elements-02.mp4" style="width:100%;border-radius:8px"></video>
+<p style="text-align:center;font-size:0.9rem">ikas tarafından hazırlanan bazı bölüm ve bileşen örnekleri</p>
