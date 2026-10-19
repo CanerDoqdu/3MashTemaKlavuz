@@ -1,32 +1,30 @@
 :root {
-  /* Gündüz modunda yeşile kaçmayan, okunaklı zengin sarı/altın tonları */
-  --ifm-color-primary: #c99300;
-  --ifm-color-primary-dark: #b58400;
-  --ifm-color-primary-darker: #ab7d00;
-  --ifm-color-primary-darkest: #8c6600;
-  --ifm-color-primary-light: #dba21a;
-  --ifm-color-primary-lighter: #e0a927;
-  --ifm-color-primary-lightest: #ebbe4f;
-  --ifm-link-color: #b58400;
-  --ifm-link-hover-color: #8c6600;
+  --ifm-color-primary: #8c9e1c;
+  --ifm-color-primary-dark: #7e8e19;
+  --ifm-color-primary-darker: #778618;
+  --ifm-color-primary-darkest: #626e13;
+  --ifm-color-primary-light: #9aae1f;
+  --ifm-color-primary-lighter: #a1b621;
+  --ifm-color-primary-lightest: #b6cd2b;
+  --ifm-link-color: #7e8e19;
+  --ifm-link-hover-color: #626e13;
 }
 
 [data-theme="dark"] {
-  /* Gece modunda canlı ve saf sarı (yeşile kaymayan) */
-  --ifm-color-primary: #FFDE00;
-  --ifm-color-primary-dark: #e6c800;
-  --ifm-color-primary-darker: #d9bd00;
-  --ifm-color-primary-darkest: #b39c00;
-  --ifm-color-primary-light: #ffe426;
-  --ifm-color-primary-lighter: #ffe73b;
-  --ifm-color-primary-lightest: #fff07a;
+  --ifm-color-primary: #DBFA37;
+  --ifm-color-primary-dark: #c8e827;
+  --ifm-color-primary-darker: #b9d81d;
+  --ifm-color-primary-darkest: #93ad0d;
+  --ifm-color-primary-light: #e2fb5f;
+  --ifm-color-primary-lighter: #eafc7d;
+  --ifm-color-primary-lightest: #f4fec2;
   --ifm-color-primary-inverse: #0E0E0C;
-  --ifm-link-color: #FFDE00;
-  --ifm-link-hover-color: #ffe73b;
+  --ifm-link-color: #DBFA37;
+  --ifm-link-hover-color: #eafc7d;
   --ifm-background-color: #111318;
   --ifm-background-surface-color: #191c23;
   --ifm-navbar-background-color: #111318;
-  --ifm-menu-color-active: #FFDE00;
+  --ifm-menu-color-active: #DBFA37;
 }
 
 [data-theme="dark"] .button--primary {
@@ -36,91 +34,106 @@
 
 /* ====================================================
    DOCUSAURUS LOCAL SEARCH MODAL & SUGGESTIONS STYLES
-   (Gece modunda parlama ve beyaz text okunamama sorununu çözer)
+   - Seçili satırın sarı arka planı TAMAMEN KALDIRILDI
+   - Arka plan diğer satırlarla aynı koyu tonda kalır
+   - Metinler beyaz kalır
+   - Sarı renk YALNIZCA aranan/bulunan kelimelerde (mark) parlar
    ==================================================== */
 
-/* Gece modunda açılan arama menüsü */
+/* Arama modalı dropdown arka planı */
+[data-theme="dark"] .searchBar .dropdownMenu,
 html[data-theme="dark"] .searchBar .dropdownMenu {
   background: #14161b !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75), 0 4px 16px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Gece modunda arama önerisi kartı (varsayılan hali) */
+/* Tüm öneri kartlarının arka planı */
+[data-theme="dark"] .dropdownMenu .suggestion,
 html[data-theme="dark"] .dropdownMenu .suggestion {
-  background: #191c23 !important;
-  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background: #1e2129 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 6px !important;
   color: #FFFFFF !important;
-  transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
 }
 
+/* Başlık ve metinler daima BEYAZ */
+[data-theme="dark"] .dropdownMenu .suggestion .hitTitle,
+[data-theme="dark"] .dropdownMenu .suggestion .hitWrapper,
 html[data-theme="dark"] .dropdownMenu .suggestion .hitTitle {
   color: #FFFFFF !important;
   font-weight: 600;
 }
 
+/* İkincil metin ve ikonlar açık gri */
+[data-theme="dark"] .dropdownMenu .suggestion .hitPath,
+[data-theme="dark"] .dropdownMenu .suggestion .hitTree,
+[data-theme="dark"] .dropdownMenu .suggestion .hitIcon,
 html[data-theme="dark"] .dropdownMenu .suggestion .hitPath,
 html[data-theme="dark"] .dropdownMenu .suggestion .hitTree,
 html[data-theme="dark"] .dropdownMenu .suggestion .hitIcon {
-  color: #A3A398 !important;
+  color: #9da3af !important;
 }
 
-html[data-theme="dark"] .dropdownMenu .suggestion mark {
-  background: rgba(255, 222, 0, 0.22) !important;
-  color: #FFDE00 !important;
-  font-weight: 700;
-  border-radius: 2px;
-  padding: 0 2px;
+/* Bulunan kelimeler SARI (mark) */
+[data-theme="dark"] .dropdownMenu .suggestion mark,
+html[data-theme="dark"] .dropdownMenu .suggestion mark,
+.hitWrapper mark {
+  background: transparent !important;
+  color: #DBFA37 !important;
+  font-weight: 700 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+  padding: 0 !important;
 }
 
-/* Gece modunda arama satırı seçildiğinde / hover olduğunda (PARLAMAYI VE BEYAZ METİN KÖRLÜĞÜNÜ BİTİRİR) */
-html[data-theme="dark"] .dropdownMenu .suggestion.cursor,
+/* SEÇİLİ SATIR (CURSOR / HOVER / ACTIVE)
+   - SARI ARKA PLAN KESİNLİKLE YOK!
+   - Diğer satırlarla aynı koyu zemin (çok hafif aydınlık: #262a34)
+   - Sol kenarda zarif sarı çizgi
+   - Yazılar BEYAZ kalır
+   - Sarı renk sadece bulunan kelimede ve ikon/çizgide kalır */
+[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor,
+html[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor,
+[data-theme="dark"] .dropdownMenu .suggestion:hover,
 html[data-theme="dark"] .dropdownMenu .suggestion:hover {
-  background: rgba(255, 222, 0, 0.14) !important;
-  border-color: rgba(255, 222, 0, 0.5) !important;
-  border-left: 3px solid #FFDE00 !important;
+  background: #272b36 !important;
+  background-color: #272b36 !important;
+  border-color: rgba(219, 250, 55, 0.4) !important;
+  border-left: 3px solid #DBFA37 !important;
+  box-shadow: none !important;
+}
+
+/* Seçili satırın içindeki yazılar da BEYAZ kalsın, sarı zemine gömülmesin */
+[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hitTitle,
+html[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hitTitle,
+[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor,
+html[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor,
+[data-theme="dark"] .dropdownMenu .suggestion:hover .hitTitle {
   color: #FFFFFF !important;
 }
 
-html[data-theme="dark"] .dropdownMenu .suggestion.cursor .hitTitle,
-html[data-theme="dark"] .dropdownMenu .suggestion:hover .hitTitle {
-  color: #FFDE00 !important;
-  font-weight: 700;
-}
-
-html[data-theme="dark"] .dropdownMenu .suggestion.cursor mark,
-html[data-theme="dark"] .dropdownMenu .suggestion:hover mark {
-  background: rgba(255, 222, 0, 0.3) !important;
-  color: #FFFFFF !important;
+/* Seçili satırdaki bulunan kelime yine canlı SARI parlasın */
+[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor mark,
+html[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor mark,
+[data-theme="dark"] .dropdownMenu .suggestion:hover mark {
+  background: transparent !important;
+  color: #DBFA37 !important;
   text-decoration: underline !important;
 }
 
-html[data-theme="dark"] .dropdownMenu .suggestion.cursor .hitPath,
-html[data-theme="dark"] .dropdownMenu .suggestion:hover .hitPath,
-html[data-theme="dark"] .dropdownMenu .suggestion.cursor .hitTree,
-html[data-theme="dark"] .dropdownMenu .suggestion:hover .hitTree,
-html[data-theme="dark"] .dropdownMenu .suggestion.cursor .hitIcon,
-html[data-theme="dark"] .dropdownMenu .suggestion:hover .hitIcon {
-  color: #E6E6E0 !important;
+/* Seçili satırdaki ikon ve ok */
+[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hitIcon,
+[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hideAction svg,
+html[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hitIcon,
+html[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hideAction svg {
+  color: #DBFA37 !important;
+  stroke: #DBFA37 !important;
 }
 
-/* Gündüz modunda arama önerisi vurgusu */
-.dropdownMenu .suggestion.cursor,
-.dropdownMenu .suggestion:hover {
-  background: rgba(201, 147, 0, 0.12) !important;
-  border-left: 3px solid #c99300 !important;
-}
-
-.dropdownMenu .suggestion.cursor .hitTitle,
-.dropdownMenu .suggestion:hover .hitTitle {
-  color: #111318 !important;
-  font-weight: 700;
-}
-
-.dropdownMenu .suggestion.cursor mark,
-.dropdownMenu .suggestion:hover mark {
-  background: rgba(201, 147, 0, 0.22) !important;
-  color: #8c6600 !important;
+[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hitPath,
+html[data-theme="dark"] .searchBar .dropdownMenu .suggestion.cursor .hitPath {
+  color: #b0b6c2 !important;
 }
 
 .guideCategoryCards ul {
