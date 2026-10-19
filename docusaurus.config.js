@@ -81,7 +81,7 @@ const config = {
         },
         {
           label: "Yayınlama ve Sorun Giderme",
-          to: "/yayinlama/kontrol-listesi",
+          to: "/yayinlama/tema-yayinlama",
           position: "left",
         },
         {

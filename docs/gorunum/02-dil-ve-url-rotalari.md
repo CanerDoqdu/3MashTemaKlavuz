@@ -47,4 +47,4 @@ Bu örnekler bütün sayfa ve ürünlerin İngilizce karşılığı olduğu anla
 
 ## Sonraki adım
 
-[Yayın öncesi kontrol listesini açın](../yayinlama/01-kontrol-listesi.md).
+[Tema yayınlama ve önizleme adımlarını açın](../yayinlama/01-tema-yayinlama.md).

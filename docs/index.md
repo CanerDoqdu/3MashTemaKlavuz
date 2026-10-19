@@ -1,4 +1,4 @@
-﻿---
+---
 slug: /
 title: 3Mash Tema Kılavuzu
 description: 3Mash ikas temasını düzenlemek isteyenler için hazırlanmış kılavuz.
@@ -23,7 +23,7 @@ Bu kılavuz, 3Mash ikas temasını düzenlemek isteyenler için hazırlanmışt�
   Temada kayıtlı bölümlerin listesi ve ayar alanları.
 - [Görünüm ve İçerik](./gorunum/01-gorsel-ve-icerik.md)
   Metin, görsel ve görünürlük ayarlarının düzenlenmesi.
-- [Yayınlama ve Sorun Giderme](./yayinlama/01-kontrol-listesi.md)
+- [Yayınlama ve Sorun Giderme](./yayinlama/01-tema-yayinlama.md)
   Değişikliklerin kontrolü ve yayına hazırlık adımları.
 - [İsteğe Bağlı Teknik Bilgiler](./teknik-bilgiler/01-proje-yapisi.md)
   Kod ve proje yapısına ilişkin teknik detaylar.
@@ -36,7 +36,7 @@ Bu kılavuz, 3Mash ikas temasını düzenlemek isteyenler için hazırlanmışt�
 2. [Studio'ya erişin](./baslangic/01-kurulum-ve-ilk-acilis.md).
 3. [Studio'da düzenlemeyi öğrenin](./studio/01-ikas-studio.md).
 4. [İhtiyacınız olan bölümü bulun](./bolumler/index.md).
-5. [Yayınlama kontrol listesini izleyin](./yayinlama/01-kontrol-listesi.md).
+5. [Tema yayınlama ve önizleme adımlarını inceleyin](./yayinlama/01-tema-yayinlama.md).
 
 ## Teknik içerik
 
