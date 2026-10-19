@@ -1,13 +1,16 @@
-﻿/** @type {import('@docusaurus/types').Config} */
+/** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "3Mash Tema Kılavuzu",
   tagline: "3Mash ikas temasını düzenlemek isteyenler için hazırlanmış kılavuz",
-  url: "http://localhost:3000",
-  baseUrl: "/",
-  onBrokenLinks: "throw",
+  url: "https://canerdoqdu.github.io",
+  baseUrl: "/3MashTemaKlavuz/",
+  organizationName: "CanerDoqdu",
+  projectName: "3MashTemaKlavuz",
+  trailingSlash: false,
+  onBrokenLinks: "warn",
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: "throw",
+      onBrokenMarkdownLinks: "warn",
     },
   },
   i18n: {
@@ -53,7 +56,7 @@ const config = {
     navbar: {
       logo: {
         alt: "3Mash",
-        src: "/assets/img/3mash-logo.png",
+        src: "assets/img/3mash-logo.png",
         style: { height: "28px" },
       },
       title: "",

@@ -20,9 +20,9 @@ Studio'da açık olan Anasayfa düzenleyicisinde `Bölümler (13)` listesi ve se
 
 ## Kategoriler
 
-- [Anasayfa ve ortak alanlar](./anasayfa-ortak-alanlar)
-- [Ürün sayfaları](./urun-sayfalari)
-- [Kategori ve arama](./kategori-ve-arama)
-- [İçerik ve kurumsal sayfalar](./icerik-ve-kurumsal)
-- [Hesap, sepet ve yasal sayfalar](./hesap-sepet-ve-yasal)
-- [Tanıtım ve özel sayfalar](./tanitim-ve-ozel-sayfalar)
+- [Anasayfa ve ortak alanlar](/bolumler/anasayfa-ortak-alanlar)
+- [Ürün sayfaları](/bolumler/urun-sayfalari)
+- [Kategori ve arama](/bolumler/kategori-ve-arama)
+- [İçerik ve kurumsal sayfalar](/bolumler/icerik-ve-kurumsal)
+- [Hesap, sepet ve yasal sayfalar](/bolumler/hesap-sepet-ve-yasal)
+- [Tanıtım ve özel sayfalar](/bolumler/tanitim-ve-ozel-sayfalar)
