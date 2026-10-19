@@ -1,0 +1,9 @@
+{
+  "label": "Bölüm Rehberi",
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "bolumler/index"
+  },
+  "collapsed": false
+}

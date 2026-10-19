@@ -1,0 +1,9 @@
+{
+  "label": "Anasayfa ve ortak alanlar",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/bolumler/anasayfa-ortak-alanlar",
+    "description": "Anasayfa bölümleri ile başlık ve alt bilgi gibi ortak alanlar."
+  }
+}

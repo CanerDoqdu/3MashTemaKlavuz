@@ -1,0 +1,9 @@
+{
+  "label": "Kategori ve arama",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/bolumler/kategori-ve-arama",
+    "description": "Kategori listeleme ve arama deneyimiyle ilişkili kayıtlı bölümler."
+  }
+}
