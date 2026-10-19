@@ -6,6 +6,56 @@ sidebar_position: 1
 
 # Elementler
 
-:::note
-Bu sayfa hazırlanmaktadır. İçerik yakında eklenecektir.
+Elementler, sayfayı oluşturan yapı taşlarıdır. Yazı, görsel, buton, video gibi her parça bir elementtir. Lego parçaları gibi düşün: parçaları bir araya getirerek bölüm ve bileşen yaparsın, bunlar da sayfayı oluşturur.
+
+:::warning Dikkat
+Elementleri yalnızca **Tasarım modunda** kullanabilirsin. İçerik modunda sayfaya yalnızca hazır bölüm eklenebilir.
 :::
+
+---
+
+## Hangi Modda Ne Yapılır?
+
+| Mod | Ne Yapılabilir? |
+|---|---|
+| **İçerik modu** | Sayfaya yeni bölüm eklenir. Element düzeyinde işlem yapılamaz. |
+| **Tasarım modu** | Tüm elementler görünür ve kullanılabilir; bölüm ve bileşen buradan oluşturulur. |
+
+:::important Önemli Kural
+Sayfalar bölümlerden oluşur. Bir elementi bölümün dışına koyabilirsin, ancak herhangi bir bölüme dahil edilmemiş element canlı siteye **yansımaz**. Bu esneklik, yapıyı hızlıca kurabilmeni ve sonradan bölüme dönüştürebilmeni sağlar.
+:::
+
+---
+
+## Element Grupları
+
+| Grup | Elementler | Açıklama |
+|---|---|---|
+| **Düzen** | Çerçeve, Izgara, 2 Sütun, 2 Satır | Diğer elementleri içine yerleştirdiğin kutular |
+| **Temel** | Yazı, Görsel, Video, Icon, Button, Iframe | Sayfanın temel içerik öğeleri |
+| **Gelişmiş** | Slider, Sonsuz Kaydırıcı, Marquee, ikas Hızlı Öde | Kayan, hareketli ve ödeme elementleri |
+| **Form** | Input, Date, Textarea, Checkbox, Select | Müşteriden bilgi toplamak için kullanılan alanlar |
+
+- **Düzen elementleri** çerçeve tabanlıdır; hazır renk ve boşluk stilleriyle gelir. Sıfırdan özelleştirmek istersen stilleri temizleyebilirsin.
+- **Çerçeve**, içine başka element eklenebilen ve listelerin bağlandığı temel kutudur.
+- **Button**, çerçeve ve yazı elementinden oluşturulmuş hazır bir şablondur.
+- **ikas Hızlı Öde**, müşteriyi ürün ve adet bilgisiyle doğrudan ödeme adımına yönlendirir.
+
+:::tip İpucu
+Bir elemente sağ tıklayıp **Stili Temizle** seçeneğini kullanarak tüm stilleri sıfırlayabilirsin.
+:::
+
+<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/elements-01.mp4" style={{width: "100%", borderRadius: "8px"}} />
+<p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>Elementler kısmının genel görünümü</p>
+
+---
+
+## Şablonlar
+
+- **Bölümler:** Bileşen ve elementlerle oluşturulur.
+- **Bileşenler:** Yalnızca elementlerle oluşturulur.
+
+Her ikisi de tema geliştiricisi tarafından bir kez tasarlanır; oluşturulduktan sonra tekrar tekrar kullanılabilir.
+
+<video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/elements-02.mp4" style={{width: "100%", borderRadius: "8px"}} />
+<p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>ikas tarafından hazırlanan bazı bölüm ve bileşen örnekleri</p>
