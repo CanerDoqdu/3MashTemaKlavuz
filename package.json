@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run build:site && docusaurus serve",
-    "build": "node scripts/build-guide.mjs",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
     "build:site": "docusaurus build",
+    "build:pdf": "node scripts/build-guide.mjs",
     "serve": "docusaurus serve"
   },
   "dependencies": {

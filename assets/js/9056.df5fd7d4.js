@@ -1,1 +1,0 @@
-(self.webpackChunk_3mash_kilavuz=self.webpackChunk_3mash_kilavuz||[]).push([[9056],{6675(){}}]);
