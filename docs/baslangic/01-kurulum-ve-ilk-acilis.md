@@ -32,7 +32,7 @@ Bu bölüm, ikas panelinden tema editörüne (Studio) ulaşmak için gereken ad�
 
 - [ ] ikas paneline giriş yapıldı.
 - [ ] Satış Kanalları > Online Mağaza > Temalarım sayfasına ulaşıldı.
-- [ ] **Temayı Özelleştir** butonu ile Studio editörü açıldı.
+- [ ] **Özelleştir** butonu ile Studio editörü açıldı.
 
 ## Sonraki adım
 
