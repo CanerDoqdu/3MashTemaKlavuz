@@ -54,7 +54,6 @@ Her sayfanın kendi ayar penceresi vardır. Buradan sayfanın Google'da nasıl g
 Değişiklik yaptıktan sonra **Kaydet**'e basmayı unutma.
 :::
 
-![Sayfa Ayarları penceresinde meta başlık ve açıklama](/assets/img/studio-sayfa-ayarlari-01.png)
 
 ---
 
@@ -75,3 +74,4 @@ Aynı sayfa tipi için farklı tasarımlar yapabilirsin. Her özelleştirmenin k
 
 <video controls src="https://media.builders.ikas.com/ikas-studio/content-and-design/pages-03.mp4" style={{width: "100%", borderRadius: "8px"}} />
 <p style={{textAlign: "center", color: "var(--ifm-color-secondary-darkest)", fontSize: "0.9rem"}}>Özelleştirmeler örneği</p>
+
