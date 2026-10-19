@@ -26,7 +26,6 @@ Studio editöründe sol paneldeki bölüm listesinden bu bölümü ekleyebilir, 
 
 Aşağıdaki tablo kod yapılandırmasını gösterir. “Başlangıç değeri”, config'te tanımlı değerdir; mağazanın güncel içeriği değildir.
 
-Studio'da `Sepet Sayfası Rotası` alanında `/cart` görünüyordu. Bu, bir rota alanı örneğidir; sayfanın slug'ını veya canlı bağlantının çalıştığını kanıtlamaz.
 
 ![Studio'da Sepet Sayfası Rotası alanında görünen /cart değerinin yakın planı](/assets/img/studio-sepet-sayfasi-rotasi-01.png)
 

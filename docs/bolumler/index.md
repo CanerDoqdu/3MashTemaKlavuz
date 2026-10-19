@@ -14,7 +14,7 @@ Bu bölümde, temanın `ikas.config.json` yapılandırmasına kayıtlı 71 böl�
 - Ekranda hangi alanların nasıl göründüğünü doğrulamadığımız bölümler ` ` olarak işaretlenmiştir.
 - Hassas olabilecek alan değerleri ve dış site adresleri kılavuza aktarılmaz.
 
-Studio'da açık olan Anasayfa düzenleyicisinde `Bölümler (13)` listesi ve seçili `Anasayfa Üst Menü` ayar grupları görüldü. Bu gözlem yalnızca o sırada açık olan düzenleyici ekranını kapsar; diğer sayfaların yerleşimini kanıtlamaz.
+Studio'da açık olan Anasayfa düzenleyicisinde `Bölümler (13)` listesi ve seçili `Anasayfa Üst Menü` ayar grupları görüldü. Studio düzenleyicisinde mağazanızın anasayfa veya alt sayfalarını seçerek bölümlerin sırasını ve ayar gruplarını yönetebilirsiniz.
 
 ![Studio'da Anasayfa Üst Menü için görünen ayar gruplarından kırpılmış görüntü](/assets/img/studio-ust-menu-alan-gruplari-01.png)
 

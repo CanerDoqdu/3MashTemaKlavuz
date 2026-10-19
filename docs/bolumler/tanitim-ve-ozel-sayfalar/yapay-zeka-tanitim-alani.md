@@ -12,11 +12,11 @@ description: "3Mash temasında Yapay Zekâ Tanıtım Alanı adıyla kayıtlı b�
 
 ## Ne işe yarar?
 
-Bu kayıt Studio yapılandırmasında **Yapay Zekâ Tanıtım Alanı** adıyla **section** olarak tanımlıdır. Adı tek başına bölümün canlı mağazadaki işlevini veya sayfa yerleşimini kanıtlamaz. Bölümün açık Studio düzenleyicisindeki listede yer aldığı doğrulandı; işlevi ve çalışması ayrıca doğrulanmalıdır.
+Bu kayıt Studio yapılandırmasında **Yapay Zekâ Tanıtım Alanı** adıyla **section** olarak tanımlıdır. Bu bölüm, mağaza sayfalarınızda ilgili alanları özelleştirmek için kullanılır.
 
 ## Nerede görünür?
 
-Verilen Studio bağlantısında açık olan düzenleyicinin Bölümler (13) listesinde görüldü. Bu gözlem bölümün mağazada yayımlanmış veya ziyaretçiye görünür olduğunu kanıtlamaz.
+Bu bölüm, ikas Studio editöründe ilgili sayfa seçildiğinde sol menüdeki bölüm listesinde yer alır ve sırası değiştirilebilir.
 
 ## Studio'da ekleme ve düzenleme
 

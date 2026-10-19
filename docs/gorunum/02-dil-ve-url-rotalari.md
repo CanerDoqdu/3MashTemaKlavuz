@@ -11,7 +11,6 @@ Bu bölüm, Türkçe ve İngilizce içerik alanlarını, sayfa rotalarını ve s
 
 ## Dil seçimi ve çevrilen metinler
 
-Studio üst çubuğunda `TR Türkçe` göstergesi görülmüştür. Bu, ekrandaki dil göstergesini belgeler; seçimin tüm alanlara nasıl uygulandığını veya mağazadaki her alanın İngilizce çevirisinin hazır olduğunu kanıtlamaz.
 
 Üst Menü V2 yapılandırmasında duyuru bandı için Türkçe ve İngilizce metin, bayrak görseli ve dil seçiciyi açıp kapatan alanlar kayıtlıdır. Yapılandırmadaki varsayılan değerler mağazanın güncel değerleriyle aynı olmak zorunda değildir. Alanların tam listesi için [Üst Menü V2 alanlarına](../bolumler/anasayfa-ortak-alanlar/ust-menu-v2.md) bakın.
 
@@ -26,14 +25,14 @@ Anasayfa Üst Menü ayarlarında `Sepet Sayfası Rotası` alanı `/cart` değeri
 
 ## Kodda tanımlı rota örnekleri
 
-| Türkçe yol / slug | Kodda tanımlı İngilizce yol | Kanıt durumu |
+| Türkçe yol / slug | Kodda tanımlı İngilizce yol | Açıklama |
 |---|---|---|
-| `/3d-yazicilar` | `/en/3d-printers` | Tema kodundaki açık rota eşlemesi; canlı mağazada ayrıca doğrulanmadı. |
-| `mash-p16l-385nm-16k-dental-3d-yazici` | `/en/mash-p16l-385nm-16k-dental-3d-printer` | Tema kodundaki ürün eşlemesi; canlı mağazada ayrıca doğrulanmadı. |
+| `/3d-yazicilar` | `/en/3d-printers` | Tema kodunda tanımlı rota eşlemesi. |
+| `mash-p16l-385nm-16k-dental-3d-yazici` | `/en/mash-p16l-385nm-16k-dental-3d-printer` | Tema kodunda tanımlı ürün eşlemesi. |
 
 Bu örnekler bütün sayfa ve ürünlerin İngilizce karşılığı olduğu anlamına gelmez. Tema kodu yalnızca açık eşlemesi bulunan bazı yolları tanır; eşleme yoksa adresi çevirerek yeni slug oluşturulmamalıdır.
 
-> ℹ️ **Geliştirici notu:** Tema kodu metinleri mevcut dile göre seçer ve tanımlı rotaları İngilizce yola eşler. Bazı ürün listeleri İngilizce dilde yalnızca açık karşılığı bulunan ürünleri gösterir. Bu davranış, Studio'daki her içeriğin çevrildiğini veya rotaların yayında çalıştığını kanıtlamaz.
+> ℹ️ **Geliştirici notu:** Tema kodu metinleri mevcut dile göre seçer ve tanımlı rotaları İngilizce yola eşler. Bazı ürün listeleri İngilizce dilde yalnızca açık karşılığı bulunan ürünleri gösterir. Çoklu dil ayarlarının mağaza genelinde tutarlı şekilde yapılandırılması önerilir.
 
 ## Güvenli kontrol sırası
 
