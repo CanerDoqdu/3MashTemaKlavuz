@@ -28,11 +28,11 @@ Bu bölüm, ikas panelinden tema editörüne (Studio) ulaşmak için gereken ad�
 
 ![ikas Studio Temayı Özelleştir butonu](/assets/img/ikas-panel-temalarim-yakin-01.png)
 
-## Kontrol listesi
+## Kısa Özet
 
-- [ ] ikas paneline giriş yapıldı.
-- [ ] Satış Kanalları > Online Mağaza > Temalarım sayfasına ulaşıldı.
-- [ ] **Özelleştir** butonu ile Studio editörü açıldı.
+1. **Panel Girişi:** ikas yönetim paneline giriş.
+2. **Tema Sayfası:** Satış Kanalları > Online Mağaza > Temalarım menüsü.
+3. **Studio Erişimi:** Yayındaki temada **Özelleştir** butonuna tıklanarak tema editörünün açılması.
 
 ## Sonraki adım
 
