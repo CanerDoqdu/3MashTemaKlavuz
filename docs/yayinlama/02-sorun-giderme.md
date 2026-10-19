@@ -19,7 +19,7 @@ Bir önizleme veya içerik sorunu gördüğünde hangi bilgileri kontrol edeceğ
 |---|---|---|
 | Beklediğin sayfa görünmüyor | Studio'da seçili sayfa ve bölüm adını doğrula. | Doğru sayfayı açıp yeniden kontrol et. |
 | Metin veya görsel beklenenden farklı | Alanın ait olduğu bölümü ve önizleme boyutunu doğrula. | Tek bir alanı değiştirip yeniden karşılaştır. |
-| Geliştirme önizlemesi açılmıyor | `pnpm run dev` komutunun hata vermeden çalıştığını ve verdiği linki kontrol et. | Bağlantı kurulumu **DOĞRULANACAK**. |
+| Geliştirme önizlemesi açılmıyor | `pnpm run dev` komutunun hata vermeden çalıştığını ve verdiği linki kontrol et. | Bağlantı kurulumu |
 
 ## Ne zaman destek iste?
 

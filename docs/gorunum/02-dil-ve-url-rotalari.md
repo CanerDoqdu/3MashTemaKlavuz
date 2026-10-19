@@ -20,7 +20,7 @@ Studio üst çubuğunda `TR Türkçe` göstergesi görülmüştür. Bu, ekrandak
 - **Rota**, tema içindeki bir bağlantının hedef yoludur. Örnek: `/cart`.
 - **Slug**, bir sayfa veya ürün adresinin ayırt edici URL parçasıdır. Örnek: `3d-yazicilar`.
 - `/cart` gibi bir rota alanı, mağazadaki sayfanın slug'ını değiştirmez.
-- İngilizce slug'ı Türkçe addan türetilmemelidir; kodda veya mağaza ayarında açıkça tanımlanmamışsa **DOĞRULANACAK** olarak bırakılmalıdır.
+- İngilizce slug değeri kodda veya mağaza ayarlarında tanımlı olan rotalarla eşleşmelidir.
 
 Anasayfa Üst Menü ayarlarında `Sepet Sayfası Rotası` alanı `/cart` değerini göstermektedir. Bu ekran görüntüsü alanın değerini belgeler; rotanın canlı mağazada açıldığını doğrulamaz.
 

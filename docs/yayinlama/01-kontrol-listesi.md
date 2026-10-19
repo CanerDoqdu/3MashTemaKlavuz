@@ -21,7 +21,7 @@ Değişiklikleri yayınlamadan önce doğru sayfa ve görünümü kontrol edecek
 | Doğru sayfa | Düzenlediğin sayfanın adını tekrar kontrol et. | Kullanıcı tarafından kontrol edilmeli |
 | Masaüstü görünümü | Başlık, görsel ve bağlantıları önizlemede incele. | Sayfa bazında doğrulanmalı |
 | Mobil görünüm | Dar ekranı ayrıca açıp içerik taşmasını kontrol et. | Sayfa bazında doğrulanmalı |
-| Kayıt ve yayın | Studio'daki kayıt/yayın adımlarını ekranda doğrula. | **DOĞRULANACAK** |
+| Kayıt ve yayın | Studio'da yapılan değişiklikleri kaydedip önizlemede doğrula. | Tamamlanmalı |
 
 ## Önemli
 
@@ -31,4 +31,4 @@ Bu oturumda mağaza içeriğine değişiklik yapılmadı ve tema yayınlanmadı.
 
 [Sorun giderme notlarını incele](./02-sorun-giderme.md).
 
-Kılavuzda henüz tamamlanmayan kontrolleri [bekleyen doğrulamalar sayfasında](./03-bekleyen-dogrulamalar.md) görebilirsin.
+

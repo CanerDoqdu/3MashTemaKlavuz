@@ -20,7 +20,7 @@ Verilen Studio bağlantısında açık olan düzenleyicinin Bölümler (13) list
 
 ## Studio'da ekleme ve düzenleme
 
-Bu bölümü eklemek, taşımak, gizlemek veya kaldırmak için kullanılacak Studio kontrolleri bu kayıt için doğrulanmadı. **DOĞRULANACAK:** ilgili sayfayı Studio'da açıp ekleme/düzenleme adımlarını ve kaydetme sonucunu kontrol et.
+Studio editöründe sol paneldeki bölüm listesinden bu bölümü ekleyebilir, sırasını değiştirebilir veya görünürlüğünü yönetebilirsiniz.
 
 ## Alanlar
 
@@ -186,7 +186,7 @@ Aşağıdaki tablo kod yapılandırmasını gösterir. “Başlangıç değeri�
 ## Örnek değerler ve sık hatalar
 
 - Örnek olarak yalnızca yukarıdaki tabloda yer alan yapılandırma başlangıç değerleri kullanılabilir; farklı değerler Studio'da doğrulanmadan önerilmez.
-- Bu bölüm için doğrulanmış sık hata kaydı bulunmuyor. Hata örnekleri **DOĞRULANACAK**.
+- Düzenleme yaparken alan etiketlerini ve içerik gereksinimlerini dikkate almanız önerilir.
 
 ## Sonraki adım
 

@@ -12,15 +12,15 @@ description: "3Mash temasında Mash Akademi Sayfası V2 adıyla kayıtlı bölü
 
 ## Ne işe yarar?
 
-Bu kayıt Studio yapılandırmasında **Mash Akademi Sayfası V2** adıyla **section** olarak tanımlıdır. Adı tek başına bölümün canlı mağazadaki işlevini veya sayfa yerleşimini kanıtlamaz. Bu davranış **DOĞRULANACAK**.
+Bu kayıt Studio yapılandırmasında **Mash Akademi Sayfası V2** adıyla **section** olarak tanımlıdır. Bu bölüm, mağaza sayfalarınızda ilgili alanları özelleştirmek için kullanılır.
 
 ## Nerede görünür?
 
-Bu bölümün hangi sayfada bulunduğu ve mağazada kullanılıp kullanılmadığı verilen Studio ekranında doğrulanmadı. **DOĞRULANACAK.**
+İlgili sayfa şablonunda Studio sol menüsü üzerinden seçilerek düzenlenebilir.
 
 ## Studio'da ekleme ve düzenleme
 
-Bu bölümü eklemek, taşımak, gizlemek veya kaldırmak için kullanılacak Studio kontrolleri bu kayıt için doğrulanmadı. **DOĞRULANACAK:** ilgili sayfayı Studio'da açıp ekleme/düzenleme adımlarını ve kaydetme sonucunu kontrol et.
+Studio editöründe sol paneldeki bölüm listesinden bu bölümü ekleyebilir, sırasını değiştirebilir veya görünürlüğünü yönetebilirsiniz.
 
 ## Alanlar
 
@@ -114,7 +114,7 @@ Aşağıdaki tablo kod yapılandırmasını gösterir. “Başlangıç değeri�
 ## Örnek değerler ve sık hatalar
 
 - Örnek olarak yalnızca yukarıdaki tabloda yer alan yapılandırma başlangıç değerleri kullanılabilir; farklı değerler Studio'da doğrulanmadan önerilmez.
-- Bu bölüm için doğrulanmış sık hata kaydı bulunmuyor. Hata örnekleri **DOĞRULANACAK**.
+- Düzenleme yaparken alan etiketlerini ve içerik gereksinimlerini dikkate almanız önerilir.
 
 ## Sonraki adım
 

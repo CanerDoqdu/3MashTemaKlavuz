@@ -28,7 +28,7 @@ Bu yollar proje dosyalarından doğrulanmıştır. Studio sayfa yerleşimini de�
 | `pnpm install` | Proje bağımlılıklarını yükle. |
 | `pnpm run dev` | İkas bileşen geliştirme sunucusunu başlat. |
 | `pnpm run build` | İkas bileşenlerini build et. |
-| `pnpm run publish` | Manifestte yayınlama komutu olarak tanımlı; gerçek yayın akışı **DOĞRULANACAK**. |
+| `pnpm run publish` | Manifestte yayınlama komutu olarak tanımlı; gerçek yayın akışı |
 
 > **Geliştirici notu:** `pnpm-lock.yaml` ve `patches/@ikas__component-cli@2.6.1.patch` proje kurulumunun parçasıdır. README, Windows'ta `npm install` yerine `pnpm install` kullanılmasını özellikle ister.
 

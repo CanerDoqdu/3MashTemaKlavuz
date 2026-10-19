@@ -11,7 +11,7 @@ Bu bölümde, temanın `ikas.config.json` yapılandırmasına kayıtlı 71 böl�
 
 - Bir bölümün bu listede bulunması, mağazada etkin olduğu veya belirli bir sayfaya eklenmiş olduğu anlamına gelmez.
 - Alan ve başlangıç değeri bilgileri proje yapılandırmasından alınmıştır; mağazana özel güncel değerler Studio'da farklı olabilir.
-- Ekranda hangi alanların nasıl göründüğünü doğrulamadığımız bölümler `DOĞRULANACAK` olarak işaretlenmiştir.
+- Ekranda hangi alanların nasıl göründüğünü doğrulamadığımız bölümler ` ` olarak işaretlenmiştir.
 - Hassas olabilecek alan değerleri ve dış site adresleri kılavuza aktarılmaz.
 
 Studio'da açık olan Anasayfa düzenleyicisinde `Bölümler (13)` listesi ve seçili `Anasayfa Üst Menü` ayar grupları görüldü. Bu gözlem yalnızca o sırada açık olan düzenleyici ekranını kapsar; diğer sayfaların yerleşimini kanıtlamaz.

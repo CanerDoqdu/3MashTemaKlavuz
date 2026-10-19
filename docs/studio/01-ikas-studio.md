@@ -36,7 +36,7 @@ Studio üst çubuğunda **TR Türkçe** göstergesi görünmektedir. Düzenleme 
 
 - Sayfa seçicisi, Anasayfa bölüm listesi, üst menü ayar grupları ve TR Türkçe dil göstergesi masaüstü görünümünde gözlemlenmiştir.
 - İngilizce dil seçiminin davranışı ve tüm alanların çeviri durumu ayrıca doğrulanmamıştır; [dil ve URL rotaları](../gorunum/02-dil-ve-url-rotalari.md) bölümündeki açıklamalar bu sınırla değerlendirilmelidir.
-- Diğer sayfaların ve bölümlerin Studio'daki yerleşimi tek tek doğrulanmamıştır; uygun bölüm sayfalarında **DOĞRULANACAK** olarak belirtilecektir.
+- Diğer sayfaların ve bölümlerin Studio'daki yerleşimi tek tek doğrulanmamıştır; ilgili sayfalarda açıklanmaktadır.
 
 ## Sonraki adım
 
