@@ -7,158 +7,108 @@ sidebar_position: 12
 
 # Yazılımların ve Sistemlerin Aktifleştirilmesi
 
-Bu sayfa; 3Mash ekosisteminde yer alan vitrin temasını, arka plan otomasyonlarını, fiyat motorunu ve yapay zekâ dizinlerini **tek bir merkezden, en basit adımlarla** çalıştırmak ve aktifleştirmek isteyenler için hazırlanmış hızlı başlangıç kılavuzudur.
+3Mash e-ticaret altyapısını oluşturan **temayı, blog otomasyonunu, döviz kuru fiyat motorunu ve yapay zekâ dosyalarını** teknik kod bilgisine gerek kalmadan en basit adımlarla aktifleştirme ve devreye alma rehberidir.
 
-Her sistemin ne işe yaradığı, dosya konumu, çalıştırma komutu ve doğrulama adımı aşağıda özetlenmiştir. Detaylı teknik açıklamalar ve ileri düzey yapılandırmalar için başlıklardaki ilgili bağlantıları takip edebilirsiniz.
+Her sistemin ne işe yaradığı, panelden veya buluttan nasıl devreye alınacağı ve hangi yetkilere ihtiyaç duyduğu aşağıda özetlenmiştir. Detaylı teknik kılavuzlara ve ileri düzey yapılandırmalara başlıklardaki bağlantılardan ulaşabilirsiniz.
 
 ---
 
 ## ⚡ Hızlı Özet Tablosu
 
-| Sistem / Yazılım | Konum | Temel Görevi | Hızlı Başlatma / Aktifleştirme | Detaylı Rehber |
+| Sistem / Yazılım | Nerede Çalışır? | Ne İşe Yarar? | Nasıl Aktifleştirilir? | Ayrıntılı Kılavuz |
 | --- | --- | --- | --- | --- |
-| **1. 3Mash Web Vitrin Teması** | `Desktop/3MashWeb` | E-ticaret vitrini ve ikas Studio bileşenleri | `pnpm run dev` | [Hızlı Adımlar](#tema) · [Studio Rehberi](./studio/01-ikas-studio.md) |
-| **2. ikas Blog Otomasyonu** | `Desktop/ikas-blog-automation` | Yapay zekâ ile otomatik SEO blog taslakları üretme | `node functions/3mash-blog-automation/src/run.js` | [Hızlı Adımlar](#blog-otomasyonu) · [Tam Kılavuz](./10-blog-otomasyonu.mdx) |
-| **3. Ziraat Fiyat Motoru** | `Desktop/Ziraat-Exchange-Api/...` | Ziraat kuruyla EUR ➔ TRY otomatik fiyat güncelleme | `docker-compose up -d --build` | [Hızlı Adımlar](#ziraat-fiyat-motoru) · [Tam Kılavuz](./11-ziraat-fiyat-motoru.mdx) |
-| **4. Yapay Zekâ (LLM) Dosyaları** | `3MashWeb/llms.txt`, `resins.md` | AI botlarının mağazayı ve reçineleri tanıması | ikas Paneli ➔ Dosyalar'a yükle | [Hızlı Adımlar](#llm-dosyalari) · [Tam Kılavuz](./09-llm-dosyalari.mdx) |
+| **1. 3Mash Web Teması** | ikas Yönetim Paneli | Mağazanın vitrin tasarımı ve sayfaları | ikas Paneli ➔ Temalarım ➔ **Yayına Al** | [Hızlı Adımlar](#tema) · [Yayınlama Rehberi](./yayinlama/01-tema-yayinlama.md) |
+| **2. Blog Otomasyonu** | Bulut Sunucu / Cron | Otomatik SEO blog içerikleri üretip yükler | Çalışan hesabı yetkilendirilir, zamanlama kurulur | [Hızlı Adımlar](#blog-otomasyonu) · [Tam Kılavuz](./10-blog-otomasyonu.mdx) |
+| **3. Ziraat Fiyat Motoru** | Bulut / Docker Sunucu | EUR ürünleri Ziraat kuruyla TL'ye çevirir | ikas API bilgileri girilir, servis başlatılır | [Hızlı Adımlar](#ziraat-fiyat-motoru) · [Tam Kılavuz](./11-ziraat-fiyat-motoru.mdx) |
+| **4. Yapay Zekâ (LLM) Dosyaları** | ikas Dosya Yöneticisi | ChatGPT ve yapay zekâ botlarının siteyi tanıması | ikas Paneli ➔ Dosyalar alanına yüklenir | [Hızlı Adımlar](#llm-dosyalari) · [Tam Kılavuz](./09-llm-dosyalari.mdx) |
 
 ---
 
-## 1. 3Mash Web Vitrin Teması (Storefront & Studio) {#tema}
+## 1. 3Mash Web Vitrin Teması {#tema}
 
-3Mash mağazasının tüm kullanıcı arayüzünü, özel landing sayfalarını, ürün sayfalarını ve ikas Studio ile entegre çalışan Preact/TypeScript bileşenlerini barındıran ana tema projesidir.
+Mağazanızın tüm görsel vitrini, ana sayfası, ürün sayfaları ve kurumsal sayfaları hazır bir tema olarak ikas altyapısında yer alır. Temayı kullanmak için herhangi bir kodlama veya teknik kuruluma gerek yoktur.
 
-- **Dosya Konumu:** `C:\Users\caner\Desktop\3MashWeb`
-- **Gereksinimler:** Node.js (v18+) ve `pnpm` paket yöneticisi.
+### Nasıl Aktifleştirilir?
 
-### Nasıl Çalıştırılır?
+1. **ikas Yönetim Paneline** yönetici hesabınızla giriş yapın.
+2. Sol menünün alt tarafındaki **Satış Kanalları** başlığı altından **Online Mağaza** seçeneğine tıklayın.
+3. Açılan sayfada **Temalarım** sekmesine geçin.
+4. Listede yer alan **3Mash** temasını bulun ve sağındaki menüden **Yayına Al (Aktifleştir)** butonuna tıklayın.
+5. **Doğrulama:** Mağaza alan adınızı tarayıcıda açarak yeni 3Mash tasarımının canlıya geçtiğini kontrol edin.
 
-1. **Terminali açın ve tema klasörüne gidin:**
-   ```bash
-   cd C:\Users\caner\Desktop\3MashWeb
-   ```
-2. **Bağımlılıkları yükleyin (yalnızca ilk kurulumda):**
-   ```bash
-   pnpm install
-   ```
-3. **Geliştirme sunucusunu ve Studio bağlantısını başlatın:**
-   ```bash
-   pnpm run dev
-   ```
-   *Komut çalıştığında bileşenler derlenir ve yerel sunucu ikas Studio oturumuyla senkronize olur.*
-4. **Canlı yayına hazırlık (Build):**
-   ```bash
-   pnpm run build
-   ```
-
-:::tip Detaylı İnceleme
-Temayı ikas Studio arayüzünden görsel olarak düzenleme adımları için [Studio'ya Erişim Kılavuzu](./baslangic/01-kurulum-ve-ilk-acilis.md), sayfalar ve bloklar için [Bölüm Rehberi](./bolumler/index.md), kod yapısı ve mimari için [Teknik Bilgiler ve Proje Yapısı](./teknik-bilgiler/01-proje-yapisi.md) sayfalarını inceleyebilirsiniz.
+:::tip Sayfa ve İçerik Düzenleme
+Temadaki metinleri, banner görsellerini, ürün listelerini ve renkleri değiştirmek isterseniz tema üzerindeki **Özelleştir (Studio)** butonuna tıklayarak doğrudan görsel editörden düzenleyebilirsiniz. Ayrıntılar için [ikas Studio Rehberi](./studio/01-ikas-studio.md) ve [Bölüm Rehberi](./bolumler/index.md) sayfalarını inceleyebilirsiniz.
 :::
 
 ---
 
 ## 2. Otomatik Blog Üretim Sistemi (ikas Blog Otomasyonu) {#blog-otomasyonu}
 
-Her gün manuel uğraş gerektirmeden, Groq yapay zekâ modeli ile SEO uyumlu Türkçe makale metinleri üreten, Pexels üzerinden lisanslı görselleri eşleştiren ve ikas mağazanıza otomatik olarak **Taslak** statüsünde yükleyen sistemdir.
+Her gün insan müdahalesine gerek kalmadan, yapay zekâ ile sektörünüze (3D baskı, dental teknolojiler) özel SEO uyumlu Türkçe blog makaleleri hazırlayan, telifsiz yüksek çözünürlüklü fotoğraflar bulan ve sitenize **Taslak** olarak yükleyen otomatik içerik sistemidir.
 
-- **Dosya Konumu:** `C:\Users\caner\Desktop\ikas-blog-automation`
-- **Çalışma Şekli:** Bulutta (Zoho Catalyst) sunucusuz ve zamanlanmış; lokalde Node.js ile anlık tetiklenebilir.
+### Nasıl Aktifleştirilir ve Kurulur?
 
-### Nasıl Aktifleştirilir?
+Sistemin mağazanıza yazı gönderebilmesi için 3 temel adım uygulanır:
 
-#### A) Bulutta Otomatik Çalışma (Varsayılan Mod)
-Sistem **Zoho Catalyst** üzerinde zamanlanmış görev (Cron Job) olarak çalışır. Bilgisayarınızın veya terminalinizin açık kalmasına gerek yoktur; her gün belirlenen saatte sunucu tarafında kendiliğinden çalışır ve ikas panelinize taslak blog yazısını ekler.
-
-#### B) Manuel / Anlık Çalıştırma (Lokal Test Modu)
-Hemen yeni bir blog taslağı oluşturup sisteme göndermek veya ayarları test etmek için:
-
-1. **Terminali açın ve klasöre gidin:**
-   ```bash
-   cd C:\Users\caner\Desktop\ikas-blog-automation
-   ```
-2. **Gerekli bağımlılıkları kontrol edin:**
-   ```bash
-   npm install
-   ```
-3. **Tek komutla otomasyonu tetikleyin:**
-   ```bash
-   node functions/3mash-blog-automation/src/run.js
-   ```
-4. **Doğrulama:** ikas yönetim panelinizde **Satış Kanalları** ➔ **Blog** bölümüne gidin. En üstte yeni oluşturulan blog yazısının **Taslak** olarak geldiğini göreceksiniz.
+1. **ikas Panelinde Otomasyona Özel Çalışan Hesabı Açma:**
+   - ikas yönetim panelinde **Ayarlar** ➔ **Kullanıcılar / Personel** bölümüne gidin.
+   - Otomasyon botu için bir personel e-posta hesabı oluşturun (örn: `otomasyon@3mash.com`).
+   - Bu personele yalnızca **Blog / İçerik Yönetimi** yetkisi (blog postlama izni) tanımlayın.
+2. **Bulut Servisine (Cloud) Yükleme:**
+   - Otomasyon kodları tercih edilen herhangi bir bulut platformuna (örneğin **Zoho Catalyst**, **AWS**, **Render** veya bağımsız bir bulut sunucusuna) yüklenir.
+   - İlgili platform üzerinde gerekli bellek (memory/RAM) ve ortam değişkenleri (ikas personel oturumu, Groq yapay zekâ anahtarı, Pexels görsel anahtarı) girilir.
+3. **Zamanlayıcının (Cron) Ayarlanması:**
+   - Bulut panelinden zamanlama (scheduler/cron) kuralı belirlenir (örneğin: *Her sabah 09:00'da çalış*).
+   - Sistem her gün saati geldiğinde otomatik olarak hafızasını kontrol eder, daha önce yazılmamış yeni bir konu seçer, makaleyi oluşturur ve ikas paneline **Taslak** olarak kaydeder.
+4. **Yönetici Kontrolü:**
+   - Mağaza yöneticisi ikas panelinde **Satış Kanalları ➔ Blog** alanına girip hazırlanan taslağı okur, isterse düzenler ve tek tıkla yayına alır.
 
 :::info Detaylı Bilgi
-Kullanılan prompt mimarisi, konu hafıza mekanizması ve API anahtarı ayarları için [Blog Otomasyonu Kılavuzu](./10-blog-otomasyonu.mdx) sayfasını ziyaret edin.
+Otomasyonun kullandığı yapay zekâ istemleri, konu seçimi ve gelişmiş filtreleme mekanizmaları için [Blog Otomasyonu Kılavuzu](./10-blog-otomasyonu.mdx) sayfasını inceleyebilirsiniz.
 :::
 
 ---
 
 ## 3. Ziraat Döviz Kuru ve Fiyatlandırma Motoru {#ziraat-fiyat-motoru}
 
-Euro (EUR) maliyetli ürün varyantlarının Türk Lirası (TRY) satış fiyatlarını Ziraat Bankası döviz kurunu takip ederek otomatik hesaplayan, güvenlik sınırlarını doğrulayan (fail-closed koruması) ve ikas GraphQL API üzerinden mağaza fiyat listesini güncelleyen motordur.
+Euro (EUR) maliyetli ürünlerinizin satış fiyatlarını Ziraat Bankası'nın anlık EUR/TRY kuruna göre otomatik güncelleyen arka plan servisidir. Ani kur dalgalanmalarına veya hatalı verilere karşı güvenlik kilitli (fail-closed) çalışır.
 
-- **Dosya Konumu:** `C:\Users\caner\Desktop\Ziraat-Exchange-Api\Ziraat-ExchangeRate-Api`
-- **Gereksinimler:** Docker Desktop (veya Python 3.11+, PostgreSQL 16, Redis).
+### Nasıl Aktifleştirilir?
 
-### Nasıl Çalıştırılır?
+1. **ikas API Erişim Anahtarı Alma:**
+   - ikas yönetim panelinden fiyat listesini güncelleyebilmek için mağaza API token'ı ve mağaza ID'si alınır.
+2. **Sunucuda / Bulutta Servisi Başlatma:**
+   - Servis kodları bir sunucuya (bulut sanal sunucu veya Docker destekli bir ortama) yerleştirilir.
+   - Yapılandırma dosyasına (`.env`) ikas mağaza bilgileri ve güncellenecek fiyat listesi ID'si yazılır.
+   - Servis tek bir komutla (`docker-compose up -d`) ayağa kaldırılır.
+3. **Otomatik Fiyat Takibi:**
+   - Sistem arka planda düzenli aralıklarla Ziraat Bankası kurunu kontrol eder.
+   - Euro bazlı ürün maliyetlerini güncel kur ile çarparak Türk Lirası fiyatlarını hesaplar.
+   - Tüm güvenlik sınırları (ani fiyat düşüşü/artışı kontrolü) geçerliyse ikas mağazanızdaki fiyat listesini otomatik olarak günceller.
 
-En pratik ve hatasız çalıştırma yöntemi **Docker Compose** kullanmaktır. Tek bir komutla API, Kur Takipçisi (Rate Worker), Fiyat Hesaplayıcısı (Price Worker), Redis ve PostgreSQL ayağa kalkar.
-
-1. **Terminali açın ve klasöre gidin:**
-   ```bash
-   cd C:\Users\caner\Desktop\Ziraat-Exchange-Api\Ziraat-ExchangeRate-Api
-   ```
-2. **Ortam değişkenlerini hazırlayın (ilk kurulumda):**
-   ```bash
-   cp .env.example .env
-   ```
-   *`.env` dosyası içindeki ikas mağaza ID'si (`IKAS_STORE_ID`), API token'ı (`IKAS_API_TOKEN`) ve fiyat listesi ID'sini (`IKAS_PRICE_LIST_ID`) doğrulayın.*
-3. **Tüm sistemi Docker ile arka planda başlatın:**
-   ```bash
-   docker-compose up -d --build
-   ```
-4. **Çalışma durumunu kontrol edin:**
-   ```bash
-   docker-compose ps
-   docker-compose logs -f price-worker
-   ```
-5. **Güvenli Test (Dry-Run Modu):**
-   Mağazadaki gerçek fiyatlara dokunmadan sadece kur çekme ve fiyat hesaplama adımlarını doğrulamak için `.env` içerisindeki `DRY_RUN=true` değerini aktif edebilirsiniz.
-
-:::important Fail-Closed Güvenlik Kilidi
-Ziraat Bankası kuru çekilemezse sistem otomatik olarak TCMB kuruna geçer. İki kaynak da erişilemezse veya beklenmedik ani kur sıçraması algılanırsa sistem kendini kilitler ve mağaza fiyatlarını bozmaz. Ayrıntılar için [Ziraat Fiyat Motoru Kılavuzu](./11-ziraat-fiyat-motoru.mdx) sayfasına bakın.
+:::important Güvenlik Kilidi Politikası
+Ziraat Bankası sistemine erişilemezse motor otomatik olarak TCMB kuruna geçer. İki bankaya da ulaşılamazsa veya olağan dışı bir fiyat hatası sezilirse sistem güncellemeyi durdurur ve mağazadaki mevcut fiyatları asla bozmaz. Detaylar için [Ziraat Fiyat Motoru Kılavuzu](./11-ziraat-fiyat-motoru.mdx) sayfasını inceleyin.
 :::
 
 ---
 
 ## 4. Yapay Zekâ ve LLM Dizin Dosyaları (`llms.txt` & `resins.md`) {#llm-dosyalari}
 
-ChatGPT, Claude, Perplexity ve Google AI botlarının 3Mash mağazasını, ürün kategorilerini ve Formlabs dental reçinelerini tek bir istekte en doğru şekilde anlamasını sağlayan hafif kılavuz dosyalarıdır.
-
-- **Dosya Konumu:** `C:\Users\caner\Desktop\3MashWeb\llms.txt` ve `C:\Users\caner\Desktop\3MashWeb\resins.md`
+ChatGPT, Claude, Perplexity ve Google gibi yapay zekâ botlarının 3Mash mağazasını, ürün kategorilerini ve Formlabs dental reçinelerini en doğru ve güncel bilgilerle öğrenmesini sağlayan hafif rehber dosyalardır.
 
 ### Nasıl Aktifleştirilir?
 
-Bu dosyaların çalışması için bir sunucu veya kod derlemesi gerekmez; ikas paneli üzerinden mağazanın kök dizinine yüklenmeleri yeterlidir:
+Bu dosyaların çalışması için herhangi bir sunucu çalıştırmanıza gerek yoktur. ikas yönetim paneline dosya olarak yüklenmeleri yeterlidir:
 
 1. **ikas yönetim paneline** giriş yapın.
-2. Sol menüden **Kurulu Uygulamalar** ➔ **Dosyalar** alanına tıklayın.
-3. Sağ üst köşedeki **Dosya Ekle** butonuna basın.
-4. `3MashWeb` klasöründeki `llms.txt` ve `resins.md` dosyalarını seçerek yükleyin.
-5. **Doğrulama:** Tarayıcınızda şu bağlantıları açarak içeriğin geldiğini teyit edin:
-   - `https://3mash.com/llms.txt` (veya test alan adınız)
-   - `https://3mash.com/resins.md`
+2. Sol menüden **Kurulu Uygulamalar** başlığı altındaki **Dosyalar** sayfasına gidin.
+3. Sağ üst köşedeki **Dosya Ekle** butonuna tıklayın.
+4. Hazır olan `llms.txt` ve `resins.md` dosyalarını seçerek yükleyin.
+5. **Doğrulama:** Tarayıcınızın adres çubuğuna sitenizin adresini ve dosya adını yazarak kontrol edin:
+   - `https://siteadresiniz.com/llms.txt`
+   - `https://siteadresiniz.com/resins.md`
+   *Ekranda metinler açılıyorsa yapay zekâ botları sitenizi başarıyla okumaya başlayacaktır.*
 
-:::tip Detaylı İnceleme
-Dosyaların içeriği, yapay zekâ botlarının dosyaları nasıl okuduğu ve güncelleme prosedürü hakkında ayrıntılı bilgi için [LLM (Yapay Zekâ) Dosyaları Kılavuzu](./09-llm-dosyalari.mdx) sayfasına bakın.
+:::tip Dosya İçerikleri ve Güncelleme
+Dosyaların içindeki metin formatları ve yeni reçineler eklendiğinde nasıl güncelleneceği hakkında ayrıntılı bilgi için [LLM Dosyaları Kılavuzu](./09-llm-dosyalari.mdx) sayfasını inceleyebilirsiniz.
 :::
-
----
-
-## 🛠️ Sorun Giderme ve Hızlı Kontrol Listesi
-
-Bir sistem çalışmadığında veya hata verdiğinde kontrol edilmesi gereken temel noktalar:
-
-- [ ] **Node / pnpm Hatası:** Windows terminalinde `pnpm` komutu tanınmıyorsa `npm install -g pnpm` ile pnpm'i kurun veya güncelleyin.
-- [ ] **Docker Başlatılamıyor:** Ziraat Fiyat Motoru için Docker Desktop uygulamasının arka planda açık ve çalışır durumda olduğundan emin olun.
-- [ ] **API Anahtarları:** Fiyat motorunda ve blog otomasyonunda `.env` dosyalarındaki token'ların doğruluğunu teyit edin.
-- [ ] **Daha Fazla Sorun Giderme:** Karşılaşılan genel hatalar ve çözümleri için [Yayınlama ve Sorun Giderme Kılavuzu](./yayinlama/02-sorun-giderme.md) sayfasını inceleyebilirsiniz.
