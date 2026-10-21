@@ -8,7 +8,7 @@ description: 3Mash ikas temasını düzenlemek isteyenler için hazırlanmış k
 
 Bu kılavuz, 3Mash ikas temasını düzenlemek isteyenler için hazırlanmıştır. Temayı ikas Studio üzerinden açma, sayfa bölümlerini düzenleme ve ihtiyaç duyulan ayarlara ulaşma adımlarını içerir.
 
-**Sürüm:** v1
+**Sürüm:** v1  
 **Yayın tarihi:** 18 Ekim 2026
 
 ## Nereden başlamalı?
@@ -17,6 +17,8 @@ Bu kılavuz, 3Mash ikas temasını düzenlemek isteyenler için hazırlanmışt�
 
 - [Başlangıç](./baslangic/00-temayi-taniyin.md)
   Temanın yapısı, düzenlenebilir bölümler ve Studio'ya erişim adımları.
+- [Yazılımların Aktifleştirilmesi](./12-yazilimlarin-aktiflestirilmesi.mdx)
+  Tema, blog otomasyonu, Ziraat fiyat motoru ve LLM rehberlerini tek sayfada çalıştırma.
 - [Studio'da Düzenleme](./studio/01-ikas-studio.md)
   Sayfalar, bölümler ve düzenlenebilir alanların tanıtımı.
 - [Bölüm Rehberi](./bolumler/index.md)
@@ -33,10 +35,11 @@ Bu kılavuz, 3Mash ikas temasını düzenlemek isteyenler için hazırlanmışt�
 ## Önerilen okuma sırası
 
 1. [Temayı tanıyın](./baslangic/00-temayi-taniyin.md).
-2. [Studio'ya erişin](./baslangic/01-kurulum-ve-ilk-acilis.md).
-3. [Studio'da düzenlemeyi öğrenin](./studio/01-ikas-studio.md).
-4. [İhtiyacınız olan bölümü bulun](./bolumler/index.md).
-5. [Tema yayınlama ve önizleme adımlarını inceleyin](./yayinlama/01-tema-yayinlama.md).
+2. [Sistemleri ve yazılımları aktifleştirin](./12-yazilimlarin-aktiflestirilmesi.mdx).
+3. [Studio'ya erişin](./baslangic/01-kurulum-ve-ilk-acilis.md).
+4. [Studio'da düzenlemeyi öğrenin](./studio/01-ikas-studio.md).
+5. [İhtiyacınız olan bölümü bulun](./bolumler/index.md).
+6. [Tema yayınlama ve önizleme adımlarını inceleyin](./yayinlama/01-tema-yayinlama.md).
 
 ## Teknik içerik
 

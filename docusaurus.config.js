@@ -65,6 +65,11 @@ const config = {
           position: "left",
         },
         {
+          label: "Yazılımları Çalıştırma",
+          to: "/yazilimlarin-aktiflestirilmesi",
+          position: "left",
+        },
+        {
           label: "Studio'da Düzenleme",
           to: "/studio/ikas-studio",
           position: "left",
