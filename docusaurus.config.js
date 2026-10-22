@@ -65,23 +65,23 @@ const config = {
           position: "left",
         },
         {
-          label: "Yazılımları Çalıştırma",
-          to: "/yazilimlarin-aktiflestirilmesi",
-          position: "left",
-        },
-        {
           label: "Studio'da Düzenleme",
           to: "/studio/ikas-studio",
           position: "left",
         },
         {
-          label: "Bölüm Rehberi",
-          to: "/bolumler/",
+          label: "Yeni Kategori Ekleme",
+          to: "/yeni-kategori-ekleme/yeni-kategori-ekleme",
           position: "left",
         },
         {
-          label: "Görünüm ve İçerik",
-          to: "/gorunum/gorsel-ve-icerik",
+          label: "Yeni Ürün Ekleme",
+          to: "/yeni-urun-ekleme/yeni-urun-ekleme",
+          position: "left",
+        },
+        {
+          label: "Sıfırdan Bölüm Oluşturma",
+          to: "/studio/panel-bolumleri/elementler",
           position: "left",
         },
         {

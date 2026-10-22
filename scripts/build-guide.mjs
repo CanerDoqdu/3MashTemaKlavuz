@@ -111,7 +111,11 @@ function createGroups() {
     },
     {
       title: "Studio'da Düzenleme",
-      files: [path.join(docsRoot, "studio", "01-ikas-studio.md")],
+      files: [
+        path.join(docsRoot, "studio", "01-ikas-studio.md"),
+        path.join(docsRoot, "studio", "02-gorsel-ve-icerik.md"),
+        path.join(docsRoot, "studio", "03-dil-ve-url-rotalari.md"),
+      ],
     },
     {
       title: "Bölüm Rehberi",
@@ -132,13 +136,6 @@ function createGroups() {
   }
 
   groups.push(
-    {
-      title: "Görünüm ve İçerik",
-      files: [
-        path.join(docsRoot, "gorunum", "01-gorsel-ve-icerik.md"),
-        path.join(docsRoot, "gorunum", "02-dil-ve-url-rotalari.md"),
-      ],
-    },
     {
       title: "Yayınlama ve Sorun Giderme",
       files: [

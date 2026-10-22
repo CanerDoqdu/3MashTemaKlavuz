@@ -35,4 +35,4 @@ Bir ürün seçildiğinde, o ürüne özel özelleştirme modu açılır:
 
 ## Sonraki adım
 
-[Görsel ve içerik düzenleme adımlarını inceleyin](../gorunum/01-gorsel-ve-icerik.md).
+[Görsel ve içerik düzenleme adımlarını inceleyin](../studio/02-gorsel-ve-icerik.md).

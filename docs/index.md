@@ -23,7 +23,7 @@ Bu kılavuz, 3Mash ikas temasını düzenlemek isteyenler için hazırlanmışt�
   Sayfalar, bölümler ve düzenlenebilir alanların tanıtımı.
 - [Bölüm Rehberi](./bolumler/index.md)
   Temada kayıtlı bölümlerin listesi ve ayar alanları.
-- [Görünüm ve İçerik](./gorunum/01-gorsel-ve-icerik.md)
+- [Görsel ve İçerik Düzenleme](./studio/02-gorsel-ve-icerik.md)
   Metin, görsel ve görünürlük ayarlarının düzenlenmesi.
 - [Yayınlama ve Sorun Giderme](./yayinlama/01-tema-yayinlama.md)
   Değişikliklerin kontrolü ve yayına hazırlık adımları.
@@ -38,8 +38,9 @@ Bu kılavuz, 3Mash ikas temasını düzenlemek isteyenler için hazırlanmışt�
 2. [Sistemleri ve yazılımları aktifleştirin](./12-yazilimlarin-aktiflestirilmesi.mdx).
 3. [Studio'ya erişin](./baslangic/01-kurulum-ve-ilk-acilis.md).
 4. [Studio'da düzenlemeyi öğrenin](./studio/01-ikas-studio.md).
-5. [İhtiyacınız olan bölümü bulun](./bolumler/index.md).
-6. [Tema yayınlama ve önizleme adımlarını inceleyin](./yayinlama/01-tema-yayinlama.md).
+5. [Görsel ve içerik düzenlemeyi öğrenin](./studio/02-gorsel-ve-icerik.md).
+6. [İhtiyacınız olan bölümü bulun](./bolumler/index.md).
+7. [Tema yayınlama ve önizleme adımlarını inceleyin](./yayinlama/01-tema-yayinlama.md).
 
 ## Teknik içerik
 

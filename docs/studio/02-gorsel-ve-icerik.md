@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: Görsel ve içerik düzenleme
 ---
 
@@ -37,4 +37,4 @@ ikas Studio'da görselleri aşağıdaki yöntemlerle ekleyebilirsiniz:
 
 ## Sonraki adım
 
-[Dil, çeviri ve URL rotalarını inceleyin](./02-dil-ve-url-rotalari.md).
+[Dil, çeviri ve URL rotalarını inceleyin](./03-dil-ve-url-rotalari.md).
