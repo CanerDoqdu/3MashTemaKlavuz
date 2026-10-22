@@ -2,6 +2,7 @@
 const config = {
   title: "3Mash Tema Kılavuzu",
   tagline: "3Mash ikas temasını düzenlemek isteyenler için hazırlanmış kılavuz",
+  favicon: "img/favicon-3mash.png",
   url: "https://3mash-tema-klavuz.vercel.app",
   baseUrl: "/",
   trailingSlash: false,

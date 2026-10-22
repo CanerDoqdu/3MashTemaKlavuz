@@ -1,79 +1,43 @@
 ---
-title: "Ürün Detay Sayfası"
-description: "3Mash temasında Ürün Detay Sayfası adıyla kayıtlı bölümün yapılandırma alanları."
+title: Ürün Detay Sayfası
+description: Hazır görünüm seçerek sade bir ürün tanıtım alanı oluşturun.
 ---
 
 # Ürün Detay Sayfası
 
-## Bu bölümde
+Bu bölüm, ürünün başlığını, açıklamasını, görselini ve kısa teknik bilgisini tek bir tanıtım alanında gösterir. Doğrudan ürün verisi, varyant veya sepet akışı gerekmediğinde kullanılır.
 
-- Yapılandırmada kayıtlı 40 alanın türü, başlangıç değeri ve grubu bulunur.
-- Alan değerleri tema yapılandırmasından alınmıştır; mağazandaki güncel değerler farklı olabilir.
+## Ne zaman kullanılır?
 
-## Ne işe yarar?
+- Ürün için hızlı, sade ve görsel ağırlıklı bir açılış alanı istiyorsanız.
+- Hazır görünüm seçeneklerinden biri ürününüze uyuyorsa.
+- Satın alma işlevini sayfanın başka bir bölümünde kuracaksanız.
 
-Bu kayıt Studio yapılandırmasında **Ürün Detay Sayfası** adıyla **section** olarak tanımlıdır. Bu bölüm, mağaza sayfalarınızda ilgili alanları özelleştirmek için kullanılır.
+> Galeri, varyant seçimi ve sepete ekleme gerekiyorsa bunun yerine [Ürün Detay ve Satın Alma Alanı](./urun-detay-ve-satin-alma-alani.md) ile başlayın.
 
-## Nerede görünür?
+## Studio’da kurulum
 
-Bu bölüm, ikas Studio editöründe ilgili sayfa seçildiğinde sol menüdeki bölüm listesinde yer alır ve sırası değiştirilebilir.
+1. Ürün Sayfasını açın ve **Ürün Detay Sayfası** bölümünü ekleyin.
+2. **Hazır ürün sayfası teması** alanından ürüne en yakın görünümü seçin.
+3. Başlık, vurgu metni, açıklama ve ana görseli girin.
+4. Dört teknik değer alanına yalnızca satın alma kararını destekleyen bilgileri ekleyin.
+5. Butonların hedef bağlantılarını kontrol edin.
 
-## Studio'da ekleme ve düzenleme
+## Sık kullanılan ayarlar
 
-Studio editöründe sol paneldeki bölüm listesinden bu bölümü ekleyebilir, sırasını değiştirebilir veya görünürlüğünü yönetebilirsiniz.
+| Studio alanı | Ne için kullanılır? |
+| --- | --- |
+| Hazır ürün sayfası teması | Yazıcı, reçine, kürleme veya özel ürün için başlangıç görünümünü seçer. |
+| Başlık metni / Başlık vurgusu | Ürünün ana mesajını oluşturur. |
+| Açıklama | Başlığın altındaki kısa ürün tanıtımıdır. |
+| Ürün görseli | Ana ürün görselini ekler. |
+| Teknik değer 1–4 | Teknoloji, dalga boyu veya destek gibi kısa bilgileri gösterir. |
+| Birincil buton | Kullanıcıyı satın alma, iletişim veya ilgili sayfaya yönlendirir. |
 
-## Alanlar
+## Gelişmiş ayarlar
 
-Aşağıdaki tablo kod yapılandırmasını gösterir. “Başlangıç değeri”, config'te tanımlı değerdir; mağazanın güncel içeriği değildir.
-
-| Studio alanı (teknik ad) | Tür | Yapılandırmadaki başlangıç değeri | Alan grubu | Zorunlu | Açıklama / seçenekler |
-|---|---|---|---|---|---|
-| Template Preset (`templatePreset`) | TEXT | printer | Content | Hayır | Hazır ürün sayfası teması. Değerler: printer, p16l, p1d, resin, curing, scanner, blocks, oven, custom. |
-| Üst Etiket Metni (`eyebrowText`) | RICH_TEXT | 3MASH ÜRÜN | Content | Hayır | — |
-| Başlık Metni (`titleText`) | RICH_TEXT | MASH P16L | Content | Hayır | — |
-| Başlık Vurgusu (`titleEmphasis`) | RICH_TEXT | Dijital üretime güçlü başlangıç. | Content | Hayır | — |
-| Açıklama HTML (`descriptionHtml`) | RICH_TEXT | Dijitale yeni geçen klinik ve lablar için 3mash revizyonlu LCD yazıcı. Aynı parametre desteği, aynı teknik ekip. | Metin Özelleştirme | Hayır | — |
-| Ürün Görsel (`productImageUrl`) | IMAGE | Yapılandırmada varsayılan değer belirtilmemiş | Media | Hayır | — |
-| Ürün Görsel Alternatif Metni (`productImageAlt`) | TEXT | MASH P16L | Media | Hayır | — |
-| Görsel Preset (`imagePreset`) | TEXT | p16l | Media | Hayır | — |
-| Yerleşim - Genişlik (`productImageWidth`) | NUMBER | 82 | Media | Hayır | — |
-| Yerleşim - Yükseklik (`productImageHeight`) | NUMBER | 82 | Media | Hayır | — |
-| Yerleşim - X Kaydırma (`productImageXOffset`) | NUMBER | 0 | Media | Hayır | — |
-| Yerleşim - Y Kaydırma (`productImageYOffset`) | NUMBER | 0 | Media | Hayır | — |
-| Efekt - Opaklık (`productImageOpacity`) | NUMBER | 100 | Media | Hayır | — |
-| Efekt - Parlaklık (`productImageBrightness`) | NUMBER | 100 | Media | Hayır | — |
-| Efekt - Kontrast (`productImageContrast`) | NUMBER | 100 | Media | Hayır | — |
-| Efekt - Doygunluk (`productImageSaturation`) | NUMBER | 100 | Media | Hayır | — |
-| Teknik Değer 1 Etiket (`spec1Label`) | RICH_TEXT | Teknoloji | Specs | Hayır | — |
-| Teknik Değer 1 Value (`spec1Value`) | RICH_TEXT | LCD · revize | Specs | Hayır | — |
-| Teknik Değer 2 Etiket (`spec2Label`) | RICH_TEXT | Dalga boyu | Specs | Hayır | — |
-| Teknik Değer 2 Value (`spec2Value`) | RICH_TEXT | 385 nm | Specs | Hayır | — |
-| Teknik Değer 3 Etiket (`spec3Label`) | RICH_TEXT | Rol | Specs | Hayır | — |
-| Teknik Değer 3 Value (`spec3Value`) | RICH_TEXT | Ekosisteme giriş | Specs | Hayır | — |
-| Teknik Değer 4 Etiket (`spec4Label`) | RICH_TEXT | Destek | Specs | Hayır | — |
-| Teknik Değer 4 Value (`spec4Value`) | RICH_TEXT | Kurulum + eğitim | Specs | Hayır | — |
-| Birincil Buton Metni (`primaryButtonText`) | RICH_TEXT | Danışmanlık al | Buttons | Hayır | — |
-| Birincil Buton Bağlantı (`primaryButtonHref`) | TEXT | / | Buttons | Hayır | — |
-| İkincil Buton Metni (`secondaryButtonText`) | RICH_TEXT | Ana sayfaya dön | Buttons | Hayır | — |
-| İkincil Buton Bağlantı (`secondaryButtonHref`) | TEXT | / | Buttons | Hayır | — |
-| Arka Plan Rengi (`backgroundColor`) | COLOR | #f7f7f2 | Appearance | Hayır | — |
-| Yazı Rengi (`textColor`) | COLOR | #050505 | Appearance | Hayır | — |
-| Alternatif Metin Yazı Rengi (`subTextColor`) | COLOR | #4d4d45 | Appearance | Hayır | — |
-| İkincil Yazı Rengi (`mutedTextColor`) | COLOR | #8f8d84 | Appearance | Hayır | — |
-| Panel Rengi (`panelColor`) | COLOR | #ffffff | Appearance | Hayır | — |
-| Vurgu Rengi (`accentColor`) | COLOR | #c7ff1a | Appearance | Hayır | — |
-| Çizgi Rengi (`lineColor`) | COLOR | #deded5 | Appearance | Hayır | — |
-| Enable Kelime Style (`wordStyleEnabled`) | BOOLEAN | false | 07. Vurgulu Kelime Stilleri | Hayır | — |
-| Stilli Kelime Or Phrase (`styledPhrase`) | TEXT | Boş metin | 07. Vurgulu Kelime Stilleri | Hayır | — |
-| Stilli Kelime Rengi (`styledPhraseColor`) | COLOR | #C7F136 | 07. Vurgulu Kelime Stilleri | Hayır | — |
-| Make Stilli Kelime Bold (`styledPhraseBold`) | BOOLEAN | false | 07. Vurgulu Kelime Stilleri | Hayır | — |
-| Make Stilli Kelime Italic (`styledPhraseItalic`) | BOOLEAN | false | 07. Vurgulu Kelime Stilleri | Hayır | — |
-
-## Örnek değerler ve sık hatalar
-
-- Örnek olarak yalnızca yukarıdaki tabloda yer alan yapılandırma başlangıç değerleri kullanılabilir; farklı değerler Studio'da doğrulanmadan önerilmez.
-- Düzenleme yaparken alan etiketlerini ve içerik gereksinimlerini dikkate almanız önerilir.
-
-## Sonraki adım
-
-[Bölüm Rehberi](../index.md) sayfasına dönüp başka bir bölümü seç.
+| Ayar grubu | Kullanım |
+| --- | --- |
+| Görsel yerleşimi ve efektleri | Görselin boyutunu, konumunu ve renk etkilerini ince ayarlamak için. |
+| Renkler | Bölümün arka planını, panelini ve vurgu rengini değiştirmek için. |
+| Vurgulu kelime | Başlıktaki belirli bir kelimeyi farklı renk veya yazı stiliyle göstermek için. |

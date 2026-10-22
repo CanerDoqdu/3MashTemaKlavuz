@@ -2,8 +2,7 @@
   "label": "Ürün sayfaları",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "slug": "/bolumler/urun-sayfalari",
-    "description": "Ürün detaylarını ve ürün odaklı içerikleri düzenlemek için kayıtlı bölümler."
+    "type": "doc",
+    "id": "bolumler/urun-sayfalari/index"
   }
 }
