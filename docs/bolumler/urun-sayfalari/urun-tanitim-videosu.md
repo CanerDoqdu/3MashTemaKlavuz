@@ -1,47 +1,34 @@
 ---
-title: "Ürün Tanıtım Videosu"
-description: "3Mash temasında Ürün Tanıtım Videosu adıyla kayıtlı bölümün yapılandırma alanları."
+title: Ürün Tanıtım Videosu
+description: Ürün videosunu başlık ve açıklamayla gösterin.
 ---
 
 # Ürün Tanıtım Videosu
 
-## Bu bölümde
+Bu bölüm, ürünün kullanımını veya öne çıkan faydasını video ile anlatır. YouTube, Vimeo ya da doğrudan HTTPS video bağlantısı kullanabilir.
 
-- Yapılandırmada kayıtlı 8 alanın türü, başlangıç değeri ve grubu bulunur.
-- Alan değerleri tema yapılandırmasından alınmıştır; mağazandaki güncel değerler farklı olabilir.
+## Ne zaman kullanılır?
 
-## Ne işe yarar?
+- Ürünün çalışma şeklini yazıyla anlatmak yerine göstermek istiyorsanız.
+- Kurulum, kullanım veya sonuç örneği sunacaksanız.
 
-Bu kayıt Studio yapılandırmasında **Ürün Tanıtım Videosu** adıyla **section** olarak tanımlıdır. Bu bölüm, mağaza sayfalarınızda ilgili alanları özelleştirmek için kullanılır.
+## Studio’da kurulum
 
-## Nerede görünür?
+1. Bölümü ürün sayfasına ekleyin.
+2. Bölüm numarası, etiketi ve başlığı girin.
+3. Video bağlantısını ekleyin.
+4. Gerekirse başlığın yanındaki açıklamayı düzenleyin.
 
-İlgili sayfa şablonunda Studio sol menüsü üzerinden seçilerek düzenlenebilir.
+## Sık kullanılan ayarlar
 
-## Studio'da ekleme ve düzenleme
+| Studio alanı | Ne için kullanılır? |
+| --- | --- |
+| Başlık | Videonun neyi gösterdiğini açıklar. |
+| Yan açıklama | Video için kısa bağlam veya kullanım notu ekler. |
+| Video bağlantısı | YouTube, Vimeo veya doğrudan video kaynağını belirler. |
 
-Studio editöründe sol paneldeki bölüm listesinden bu bölümü ekleyebilir, sırasını değiştirebilir veya görünürlüğünü yönetebilirsiniz.
+## Gelişmiş ayarlar
 
-## Alanlar
-
-Aşağıdaki tablo kod yapılandırmasını gösterir. “Başlangıç değeri”, config'te tanımlı değerdir; mağazanın güncel içeriği değildir.
-
-| Studio alanı (teknik ad) | Tür | Yapılandırmadaki başlangıç değeri | Alan grubu | Zorunlu | Açıklama / seçenekler |
-|---|---|---|---|---|---|
-| 🎬 Video İçin Ürün (`product`) | PRODUCT | Yapılandırmada varsayılan değer belirtilmemiş | 🎬 Video Kaynağı | Hayır | — |
-| 🔢 Bölüm Sıra Numarası (`sectionIndex`) | TEXT | 04 | 📝 Bölüm İçeriği | Hayır | Bölüm başlığının yanındaki sıra numarası. |
-| 🏷️ Bölüm Etiketi (`sectionLabel`) | TEXT | VİDEO | 📝 Bölüm İçeriği | Hayır | Sıra numarasının yanında gösterilen kısa etiket. |
-| 📝 Video Bölüm Başlığı (`titleHtml`) | RICH_TEXT | Yapılandırmada varsayılan değer belirtilmemiş | 📝 Bölüm İçeriği | Hayır | Video alanının üstünde gösterilen başlık; biçimlendirme desteklenir. |
-| 📝 Video Yan Açıklaması (`sideHtml`) | RICH_TEXT | Yapılandırmada varsayılan değer belirtilmemiş | 📝 Bölüm İçeriği | Hayır | Başlığın yanında gösterilen açıklama; biçimlendirme desteklenir. |
-| 🔗 Video Adresi (`videoHref`) | TEXT | Yapılandırmada varsayılan değer belirtilmemiş | 🎬 Video Kaynağı | Hayır | HTTPS YouTube, Vimeo veya doğrudan video dosyası bağlantısı. |
-| 🎨 Arka Plan Rengi (`backgroundColor`) | COLOR | #FAFAF7 | 🎨 Renkler | Hayır | — |
-| 🎨 Metin Rengi (`textColor`) | COLOR | #0E0E0C | 🎨 Renkler | Hayır | — |
-
-## Örnek değerler ve sık hatalar
-
-- Örnek olarak yalnızca yukarıdaki tabloda yer alan yapılandırma başlangıç değerleri kullanılabilir; farklı değerler Studio'da doğrulanmadan önerilmez.
-- Düzenleme yaparken alan etiketlerini ve içerik gereksinimlerini dikkate almanız önerilir.
-
-## Sonraki adım
-
-[Bölüm Rehberi](../index.md) sayfasına dönüp başka bir bölümü seç.
+| Ayar grubu | Kullanım |
+| --- | --- |
+| Renkler | Bölümün arka plan ve metin rengini düzenler. |

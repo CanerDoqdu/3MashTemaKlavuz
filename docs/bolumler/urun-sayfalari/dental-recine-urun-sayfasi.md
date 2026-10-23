@@ -1,46 +1,33 @@
 ---
-title: "Dental Reçine Ürün Sayfası"
-description: "3Mash temasında Dental Reçine Ürün Sayfası adıyla kayıtlı bölümün yapılandırma alanları."
+title: Dental Reçine Ürün Sayfası
+description: Dental reçineler için hazır tanıtım alanını düzenleyin.
 ---
 
 # Dental Reçine Ürün Sayfası
 
-## Bu bölümde
+Bu bölüm, dental reçine için sade bir başlık, açıklama ve yönlendirme alanı oluşturur.
 
-- Yapılandırmada kayıtlı 7 alanın türü, başlangıç değeri ve grubu bulunur.
-- Alan değerleri tema yapılandırmasından alınmıştır; mağazandaki güncel değerler farklı olabilir.
+## Ne zaman kullanılır?
 
-## Ne işe yarar?
+- Bir reçine ürününü veya reçine ailesini kısa mesajla tanıtmak istiyorsanız.
+- Ayrıntılı satış alanı başka bir bölümde yer alıyorsa.
 
-Bu kayıt Studio yapılandırmasında **Dental Reçine Ürün Sayfası** adıyla **section** olarak tanımlıdır. Bu bölüm, mağaza sayfalarınızda ilgili alanları özelleştirmek için kullanılır.
+## Studio’da kurulum
 
-## Nerede görünür?
+1. Bölümü ilgili ürün veya özel sayfaya ekleyin.
+2. Üst etiketi, başlığı ve açıklamayı reçineye göre düzenleyin.
+3. Buton bağlantısını ilgili ürün veya iletişim sayfasına verin.
 
-İlgili sayfa şablonunda Studio sol menüsü üzerinden seçilerek düzenlenebilir.
+## Sık kullanılan ayarlar
 
-## Studio'da ekleme ve düzenleme
+| Studio alanı | Ne için kullanılır? |
+| --- | --- |
+| Üst etiket | Reçinenin sınıfını veya kullanım alanını belirtir. |
+| Başlık ve açıklama | Reçinenin ana faydasını anlatır. |
+| Birincil buton | Ziyaretçiyi hedef sayfaya götürür. |
 
-Studio editöründe sol paneldeki bölüm listesinden bu bölümü ekleyebilir, sırasını değiştirebilir veya görünürlüğünü yönetebilirsiniz.
+## Gelişmiş ayarlar
 
-## Alanlar
-
-Aşağıdaki tablo kod yapılandırmasını gösterir. “Başlangıç değeri”, config'te tanımlı değerdir; mağazanın güncel içeriği değildir.
-
-| Studio alanı (teknik ad) | Tür | Yapılandırmadaki başlangıç değeri | Alan grubu | Zorunlu | Açıklama / seçenekler |
-|---|---|---|---|---|---|
-| Üst Etiket (`eyebrowText`) | TEXT | Yapılandırmada varsayılan değer belirtilmemiş | İçerik | Hayır | — |
-| Başlık (`titleText`) | TEXT | Yapılandırmada varsayılan değer belirtilmemiş | İçerik | Hayır | — |
-| Açıklama (`descriptionHtml`) | RICH_TEXT | Yapılandırmada varsayılan değer belirtilmemiş | İçerik | Hayır | — |
-| Buton Metni (`primaryButtonText`) | TEXT | Yapılandırmada varsayılan değer belirtilmemiş | Bağlantılar | Hayır | — |
-| Buton Bağlantısı (`primaryButtonHref`) | TEXT | / | Bağlantılar | Hayır | — |
-| Arka Plan (`backgroundColor`) | COLOR | #fafaf7 | Görünüm | Hayır | — |
-| Yazı Rengi (`textColor`) | COLOR | #0e0e0c | Görünüm | Hayır | — |
-
-## Örnek değerler ve sık hatalar
-
-- Örnek olarak yalnızca yukarıdaki tabloda yer alan yapılandırma başlangıç değerleri kullanılabilir; farklı değerler Studio'da doğrulanmadan önerilmez.
-- Düzenleme yaparken alan etiketlerini ve içerik gereksinimlerini dikkate almanız önerilir.
-
-## Sonraki adım
-
-[Bölüm Rehberi](../index.md) sayfasına dönüp başka bir bölümü seç.
+| Ayar grubu | Kullanım |
+| --- | --- |
+| Görünüm | Arka plan ve yazı rengini düzenler. |

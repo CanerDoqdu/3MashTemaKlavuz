@@ -1,46 +1,33 @@
 ---
-title: "C4P Ürün Sayfası"
-description: "3Mash temasında C4P Ürün Sayfası adıyla kayıtlı bölümün yapılandırma alanları."
+title: C4P Ürün Sayfası
+description: C4P için hazır tanıtım alanını düzenleyin.
 ---
 
 # C4P Ürün Sayfası
 
-## Bu bölümde
+Bu bölüm, C4P için başlık, açıklama ve tek yönlendirme butonundan oluşan sade bir tanıtım alanıdır.
 
-- Yapılandırmada kayıtlı 7 alanın türü, başlangıç değeri ve grubu bulunur.
-- Alan değerleri tema yapılandırmasından alınmıştır; mağazandaki güncel değerler farklı olabilir.
+## Ne zaman kullanılır?
 
-## Ne işe yarar?
+- C4P’yi özel bir sayfada kısa biçimde tanıtmak istiyorsanız.
+- Ziyaretçiyi tek bir ürün, teklif veya iletişim adımına yönlendirecekseniz.
 
-Bu kayıt Studio yapılandırmasında **C4P Ürün Sayfası** adıyla **section** olarak tanımlıdır. Bu bölüm, mağaza sayfalarınızda ilgili alanları özelleştirmek için kullanılır.
+## Studio’da kurulum
 
-## Nerede görünür?
+1. Bölümü sayfaya ekleyin.
+2. Üst etiket, başlık ve açıklamayı güncelleyin.
+3. Butonun metnini ve hedefini girin.
 
-İlgili sayfa şablonunda Studio sol menüsü üzerinden seçilerek düzenlenebilir.
+## Sık kullanılan ayarlar
 
-## Studio'da ekleme ve düzenleme
+| Studio alanı | Ne için kullanılır? |
+| --- | --- |
+| Üst etiket | Kısa ürün veya kategori bilgisi gösterir. |
+| Başlık ve açıklama | Ana tanıtım mesajını oluşturur. |
+| Birincil buton | Seçtiğiniz sayfaya yönlendirme yapar. |
 
-Studio editöründe sol paneldeki bölüm listesinden bu bölümü ekleyebilir, sırasını değiştirebilir veya görünürlüğünü yönetebilirsiniz.
+## Gelişmiş ayarlar
 
-## Alanlar
-
-Aşağıdaki tablo kod yapılandırmasını gösterir. “Başlangıç değeri”, config'te tanımlı değerdir; mağazanın güncel içeriği değildir.
-
-| Studio alanı (teknik ad) | Tür | Yapılandırmadaki başlangıç değeri | Alan grubu | Zorunlu | Açıklama / seçenekler |
-|---|---|---|---|---|---|
-| Üst Etiket (`eyebrowText`) | TEXT | Yapılandırmada varsayılan değer belirtilmemiş | İçerik | Hayır | — |
-| Başlık (`titleText`) | TEXT | Yapılandırmada varsayılan değer belirtilmemiş | İçerik | Hayır | — |
-| Açıklama (`descriptionHtml`) | RICH_TEXT | Yapılandırmada varsayılan değer belirtilmemiş | İçerik | Hayır | — |
-| Buton Metni (`primaryButtonText`) | TEXT | Yapılandırmada varsayılan değer belirtilmemiş | Bağlantılar | Hayır | — |
-| Buton Bağlantısı (`primaryButtonHref`) | TEXT | / | Bağlantılar | Hayır | — |
-| Arka Plan (`backgroundColor`) | COLOR | #fafaf7 | Görünüm | Hayır | — |
-| Yazı Rengi (`textColor`) | COLOR | #0e0e0c | Görünüm | Hayır | — |
-
-## Örnek değerler ve sık hatalar
-
-- Örnek olarak yalnızca yukarıdaki tabloda yer alan yapılandırma başlangıç değerleri kullanılabilir; farklı değerler Studio'da doğrulanmadan önerilmez.
-- Düzenleme yaparken alan etiketlerini ve içerik gereksinimlerini dikkate almanız önerilir.
-
-## Sonraki adım
-
-[Bölüm Rehberi](../index.md) sayfasına dönüp başka bir bölümü seç.
+| Ayar grubu | Kullanım |
+| --- | --- |
+| Görünüm | Arka plan ve yazı rengini değiştirir. |
